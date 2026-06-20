@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Careers</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./Careers.css" />
+
+  <!-- Shared global design system -->
+  <link rel="stylesheet" href="./assets/css/global.css" />
+  <link rel="stylesheet" href="./assets/css/footer.css" />
+  <link rel="stylesheet" href="./assets/css/whatsapp.css" />
+  <link rel="stylesheet" href="./assets/css/animations.css" />
+
+  <!-- Font Awesome (matches Blog page footer + WhatsApp icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Bootstrap Icons (required for .bi-* icons used across the page) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!-- =====================
+       Hero Section
+  ====================== -->
+  <header class="wm-hero" id="hero">
+    <div class="wm-bg" aria-hidden="true">
+      <div class="wm-blob wm-blob-1"></div>
+      <div class="wm-blob wm-blob-2"></div>
+      <div class="wm-blob wm-blob-3"></div>
+      <div class="wm-circle wm-circle-1"></div>
+      <div class="wm-circle wm-circle-2"></div>
+      <div class="wm-circle wm-circle-3"></div>
+      <div class="wm-lines"></div>
+    </div>
+
+    <div class="container position-relative">
+      <div class="row align-items-center g-4 min-vh-70 py-5">
+        <div class="col-lg-7">
+          <!-- Badge + headline + text reveal -->
+          <div class="d-inline-flex align-items-center wm-badge reveal-up" data-reveal="up">
+            <span class="wm-badge-dot" aria-hidden="true"></span>
+            <span>Visionaries Wanted</span>
+          </div>
+
+          <h1 class="wm-hero-title reveal-up" data-reveal="up">
+            <span class="wm-text-reveal" data-text-reveal>Don’t Just Work.</span><br />
+            <span class="wm-text-reveal" data-text-reveal>Create Excellence.</span>
+          </h1>
+
+          <p class="wm-hero-desc reveal-up" data-reveal="up">
+            Build premium experiences in a culture that rewards craft, clarity, and measurable excellence.
+            Join a team focused on outcomes—and elevating every detail.
+          </p>
+
+          <div class="d-flex flex-column flex-sm-row gap-3 align-items-start">
+            <button class="btn wm-btn wm-btn-gold wm-btn-glow wm-btn-ripple" type="button" id="btnExplore" data-ripple>
+              Explore Opportunities
+            </button>
+
+            <button class="btn wm-btn wm-btn-darkgold wm-btn-outline wm-btn-ripple" type="button" id="btnApply" data-ripple>
+              Apply Now
+            </button>
+
+            <button class="btn wm-btn wm-btn-outline wm-btn-ripple" type="button" id="btnLearn" data-ripple>
+              Learn More
+            </button>
+          </div>
+
+          <div class="mt-4 wm-hero-meta reveal-up" data-reveal="up">
+            <div class="d-flex gap-2 flex-wrap">
+              <div class="wm-pill"><span class="wm-pill-icon" aria-hidden="true">✦</span> Enterprise-grade hiring</div>
+              <div class="wm-pill"><span class="wm-pill-icon" aria-hidden="true">✦</span> Growth-first mindset</div>
+              <div class="wm-pill"><span class="wm-pill-icon" aria-hidden="true">✦</span> Collaborative culture</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Premium hero card -->
+        <div class="col-lg-5">
+          <div class="wm-hero-card reveal-up" data-reveal="up">
+            <div class="wm-hero-card-inner">
+              <div class="d-flex align-items-start justify-content-between gap-3">
+                <div>
+                  <div class="wm-card-label">Now Hiring</div>
+                  <div class="wm-card-value">Multiple Roles</div>
+                </div>
+                <div class="wm-card-mark" aria-hidden="true">✦</div>
+              </div>
+
+              <div class="wm-hero-card-divider"></div>
+
+              <div class="wm-hero-card-list" aria-label="Highlights">
+                <div class="wm-hero-item">✓ Premium training</div>
+                <div class="wm-hero-item">✓ Clear career ladders</div>
+                <div class="wm-hero-item">✓ Recognition & rewards</div>
+              </div>
+
+              <button class="btn wm-btn wm-btn-gold wm-btn-ripple mt-4 w-100" type="button" id="btnQuickApply" data-ripple>
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================
+       Statistics Section
+  ====================== -->
+  <section class="wm-section" id="stats">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="wm-section-title reveal-up" data-reveal="up">Impact, Proven</h2>
+        <p class="wm-section-subtitle reveal-up" data-reveal="up">Numbers that reflect consistency, excellence, and reach.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="wm-stat-card reveal-up" data-reveal="up" data-count>
+            <div class="wm-stat-icon" aria-hidden="true">🏆</div>
+            <div class="wm-stat-number"><span class="wm-count" data-target="1000">0</span>+</div>
+            <div class="wm-stat-label">Successful Events</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="wm-stat-card reveal-up" data-reveal="up" data-count>
+            <div class="wm-stat-icon" aria-hidden="true">🏢</div>
+            <div class="wm-stat-number"><span class="wm-count" data-target="175">0</span>+</div>
+            <div class="wm-stat-label">Corporate Clients</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="wm-stat-card reveal-up" data-reveal="up" data-count>
+            <div class="wm-stat-icon" aria-hidden="true">🧠</div>
+            <div class="wm-stat-number"><span class="wm-count" data-target="35">0</span>+</div>
+            <div class="wm-stat-label">Expert Team</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="wm-stat-card reveal-up" data-reveal="up" data-count>
+            <div class="wm-stat-icon" aria-hidden="true">🌍</div>
+            <div class="wm-stat-number"><span class="wm-count" data-target="2000000">0</span>+</div>
+            <div class="wm-stat-label">Audience Engaged</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       Why Join Us
+  ====================== -->
+  <section class="wm-section" id="why">
+    <div class="container">
+      <div class="row align-items-end mb-3">
+        <div class="col-lg-7">
+          <h2 class="wm-section-title reveal-up" data-reveal="up">Why Join Us</h2>
+          <p class="wm-section-subtitle reveal-up" data-reveal="up">A culture engineered for growth, recognition, and premium output.</p>
+        </div>
+      </div>
+
+      <!-- Equal-height grid via CSS Grid -->
+      <div class="wm-why-grid" role="list">
+        <div class="wm-info-card reveal-stagger" data-reveal="stagger" role="listitem">
+          <div class="wm-icon-box" aria-hidden="true"><i class="bi bi-lightbulb-fill"></i></div>
+          <h3 class="wm-info-title">Innovation First</h3>
+          <p class="wm-info-desc">Iterate quickly, design clean, and elevate outcomes.</p>
+        </div>
+
+        <div class="wm-info-card reveal-stagger" data-reveal="stagger" role="listitem">
+          <div class="wm-icon-box" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></div>
+          <h3 class="wm-info-title">Career Growth</h3>
+          <p class="wm-info-desc">Learning paths, mentorship, and clear progression.</p>
+        </div>
+
+        <div class="wm-info-card reveal-stagger" data-reveal="stagger" role="listitem">
+          <div class="wm-icon-box" aria-hidden="true"><i class="bi bi-award-fill"></i></div>
+          <h3 class="wm-info-title">Industry Leaders</h3>
+          <p class="wm-info-desc">Trusted delivery with experienced leadership.</p>
+        </div>
+
+        <div class="wm-info-card reveal-stagger" data-reveal="stagger" role="listitem">
+          <div class="wm-icon-box" aria-hidden="true"><i class="bi bi-palette-fill"></i></div>
+          <h3 class="wm-info-title">Creative Freedom</h3>
+          <p class="wm-info-desc">Ownership, autonomy, and room to craft excellence.</p>
+        </div>
+
+        <div class="wm-info-card reveal-stagger" data-reveal="stagger" role="listitem">
+          <div class="wm-icon-box" aria-hidden="true"><i class="bi bi-people-fill"></i></div>
+          <h3 class="wm-info-title">Collaborative Culture</h3>
+          <p class="wm-info-desc">Plans, execution, and review—together.</p>
+        </div>
+
+        <div class="wm-info-card reveal-stagger" data-reveal="stagger" role="listitem">
+          <div class="wm-icon-box" aria-hidden="true"><i class="bi bi-trophy-fill"></i></div>
+          <h3 class="wm-info-title">Recognition &amp; Rewards</h3>
+          <p class="wm-info-desc">Effort is seen. Impact is celebrated.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       Career Opportunities
+  ====================== -->
+  <section class="wm-section" id="jobs">
+    <div class="container">
+      <div class="row align-items-end mb-3">
+        <div class="col-lg-8">
+          <h2 class="wm-section-title reveal-up" data-reveal="up">Career Opportunities</h2>
+          <p class="wm-section-subtitle reveal-up" data-reveal="up">Premium roles for premium output. Explore and apply.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <button class="btn wm-btn wm-btn-gold wm-btn-glow wm-btn-ripple" type="button" id="btnCustom" data-ripple>
+            Create Custom Role
+          </button>
+        </div>
+      </div>
+
+      <div id="jobsGrid" class="row g-4" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- =====================
+       Workplace Culture Gallery
+  ====================== -->
+  <section class="wm-section" id="culture">
+    <div class="container">
+      <div class="row align-items-end mb-3">
+        <div class="col-lg-8">
+          <h2 class="wm-section-title reveal-up" data-reveal="up">Workplace Culture</h2>
+          <p class="wm-section-subtitle reveal-up" data-reveal="up">A gallery of moments—focused, modern, and premium.</p>
+        </div>
+      </div>
+
+      <div class="wm-gallery-grid reveal-up" data-reveal="up">
+        <!-- Realistic premium office images (no watermarks) -->
+        <div class="wm-gallery-card" data-reveal="up">
+          <img class="wm-gallery-img" loading="lazy" decoding="async" alt="Team collaborating in a modern meeting room"
+               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80" />
+        </div>
+        <div class="wm-gallery-card" data-reveal="up">
+          <img class="wm-gallery-img" loading="lazy" decoding="async" alt="Creative brainstorming session with whiteboard"
+               src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=80" />
+        </div>
+        <div class="wm-gallery-card" data-reveal="up">
+          <img class="wm-gallery-img" loading="lazy" decoding="async" alt="Strategic planning meeting in an elegant office"
+               src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80" />
+        </div>
+        <div class="wm-gallery-card" data-reveal="up">
+          <img class="wm-gallery-img" loading="lazy" decoding="async" alt="Employee working at a stylish workstation"
+               src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?auto=format&fit=crop&w=1400&q=80" />
+        </div>
+        <div class="wm-gallery-card" data-reveal="up">
+          <img class="wm-gallery-img" loading="lazy" decoding="async" alt="Contemporary corporate office architecture"
+               src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80" />
+        </div>
+        <div class="wm-gallery-card" data-reveal="up">
+          <img class="wm-gallery-img" loading="lazy" decoding="async" alt="Premium workstation setup in a bright office"
+               src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=80" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       Employee Journey Timeline
+  ====================== -->
+  <section class="wm-section" id="journey">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="wm-section-title reveal-up" data-reveal="up">Employee Journey</h2>
+        <p class="wm-section-subtitle reveal-up" data-reveal="up">Your path from application to long-term success.</p>
+      </div>
+
+      <!-- Desktop: horizontal; Tablet: 2-col; Mobile: vertical (CSS handles) -->
+      <div class="wm-journey-wrap" data-reveal="up">
+        <div class="wm-journey-progress" aria-hidden="true"><div id="journeyFill" class="wm-journey-fill"></div></div>
+
+        <div class="wm-journey-grid" id="journeySteps" aria-label="Employee journey steps">
+          <article class="wm-journey-card reveal-up" data-step-index="0">
+            <div class="wm-journey-number" aria-hidden="true">01</div>
+            <div class="wm-journey-icon" aria-hidden="true"><i class="bi bi-file-earmark-text"></i></div>
+            <h3 class="wm-journey-title">Application</h3>
+            <p class="wm-journey-desc">Submit your application and share your experience, achievements, and career goals.</p>
+          </article>
+
+          <article class="wm-journey-card reveal-up" data-step-index="1">
+            <div class="wm-journey-number" aria-hidden="true">02</div>
+            <div class="wm-journey-icon" aria-hidden="true"><i class="bi bi-chat-dots"></i></div>
+            <h3 class="wm-journey-title">Initial Conversation</h3>
+            <p class="wm-journey-desc">Meet with our talent team and discuss your background, aspirations, and opportunities.</p>
+          </article>
+
+          <article class="wm-journey-card reveal-up" data-step-index="2">
+            <div class="wm-journey-number" aria-hidden="true">03</div>
+            <div class="wm-journey-icon" aria-hidden="true"><i class="bi bi-bullseye"></i></div>
+            <h3 class="wm-journey-title">Assessment &amp; Selection</h3>
+            <p class="wm-journey-desc">Showcase your skills through role-specific evaluations and collaborative discussions.</p>
+          </article>
+
+          <article class="wm-journey-card reveal-up" data-step-index="3">
+            <div class="wm-journey-number" aria-hidden="true">04</div>
+            <div class="wm-journey-icon" aria-hidden="true"><i class="bi bi-rocket-takeoff"></i></div>
+            <h3 class="wm-journey-title">Onboarding</h3>
+            <p class="wm-journey-desc">Get introduced to teams, culture, tools, and processes through a structured onboarding experience.</p>
+          </article>
+
+          <article class="wm-journey-card reveal-up" data-step-index="4">
+            <div class="wm-journey-number" aria-hidden="true">05</div>
+            <div class="wm-journey-icon" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></div>
+            <h3 class="wm-journey-title">Growth &amp; Development</h3>
+            <p class="wm-journey-desc">Access mentorship, learning programs, leadership opportunities, and career advancement pathways.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       FAQ
+  ====================== -->
+  <section class="wm-section" id="faq">
+    <div class="container">
+      <div class="row align-items-start">
+        <div class="col-lg-5">
+          <h2 class="wm-section-title reveal-up" data-reveal="up">Frequently Asked Questions</h2>
+          <p class="wm-section-subtitle reveal-up" data-reveal="up">Quick answers about hiring, culture, and benefits.</p>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="accordion wm-accordion" id="wmFaq" aria-label="FAQ">
+            <div class="accordion-item wm-acc-item reveal-up" data-reveal="up">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Hiring Process</button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#wmFaq">
+                <div class="accordion-body">Application review → initial conversation → assessment &amp; selection → onboarding.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item wm-acc-item reveal-up" data-reveal="up">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Work Culture</button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#wmFaq">
+                <div class="accordion-body">Premium, corporate, and collaborative. We value craft, clarity, and continuous improvement.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item wm-acc-item reveal-up" data-reveal="up">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Internships</button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#wmFaq">
+                <div class="accordion-body">Available for candidates who demonstrate curiosity, discipline, and a strong learning mindset.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item wm-acc-item reveal-up" data-reveal="up">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Remote Work</button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#wmFaq">
+                <div class="accordion-body">Role-dependent. Some positions may be hybrid or remote—expect clear deliverables.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item wm-acc-item reveal-up" data-reveal="up">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Benefits</button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#wmFaq">
+                <div class="accordion-body">Growth opportunities, training, recognition, and a supportive team environment.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       Final CTA Section
+  ====================== -->
+  <section class="wm-section" id="final-cta">
+    <div class="container">
+      <div class="wm-custom-card wm-final-card reveal-up" data-reveal="up">
+        <div class="wm-custom-glow" aria-hidden="true"></div>
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h2 class="wm-custom-title">Ready to bring excellence to the team?</h2>
+            <p class="wm-custom-desc">Create your application, then let’s evaluate fit through a structured process.</p>
+          </div>
+
+          <div class="col-lg-5 text-lg-end">
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-lg-end wm-cta-buttons">
+              <button class="btn wm-btn wm-btn-gold wm-btn-glow wm-btn-pulse wm-btn-ripple" type="button" id="btnFinalApply" data-ripple>
+                Apply Now
+              </button>
+              <button class="btn wm-btn wm-btn-darkgold wm-btn-outline wm-btn-ripple" type="button" id="btnFinalCustom" data-ripple>
+                Create Custom Role
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       Apply Now Modal
+  ====================== -->
+  <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content wm-modal">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title" id="applyModalLabel">Apply Now</h5>
+            <div class="wm-modal-sub">Submit your details and we’ll review your application.</div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="applyForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="fullName" class="form-label wm-label">Full Name</label>
+                <input type="text" class="form-control wm-input" id="fullName" name="fullName" required />
+                <div class="wm-invalid" data-err="fullName"></div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label wm-label">Email</label>
+                <input type="email" class="form-control wm-input" id="email" name="email" required />
+                <div class="wm-invalid" data-err="email"></div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="phone" class="form-label wm-label">Phone</label>
+                <input type="text" class="form-control wm-input" id="phone" name="phone" required />
+                <div class="wm-invalid" data-err="phone"></div>
+              </div>
+              <div class="col-md-6">
+                <label for="position" class="form-label wm-label">Position</label>
+                <input type="text" class="form-control wm-input" id="position" name="position" required />
+                <div class="wm-invalid" data-err="position"></div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="resume" class="form-label wm-label">Resume Upload</label>
+                <input class="form-control wm-input" type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+                <div class="wm-invalid" data-err="resume"></div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="message" class="form-label wm-label">Message</label>
+                <textarea class="form-control wm-input" id="message" name="message" rows="4" required></textarea>
+                <div class="wm-invalid" data-err="message"></div>
+              </div>
+            </div>
+
+            <div class="wm-form-status mt-3" id="applyStatus" role="status" aria-live="polite"></div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="button" class="btn wm-btn wm-btn-outline" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn wm-btn wm-btn-gold wm-btn-glow wm-btn-ripple" data-ripple>Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================
+       Custom Role Modal
+  ====================== -->
+  <div class="modal fade" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content wm-modal">
+        <div class="modal-header">
+          <div>
+            <h5 class="modal-title" id="customModalLabel">Create Custom Role</h5>
+            <div class="wm-modal-sub">Tell us the role you want. We’ll route it to the right team.</div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="customForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="cName" class="form-label wm-label">Full Name</label>
+                <input type="text" class="form-control wm-input" id="cName" name="cName" required />
+                <div class="wm-invalid" data-err="cName"></div>
+              </div>
+              <div class="col-md-6">
+                <label for="cEmail" class="form-label wm-label">Email</label>
+                <input type="email" class="form-control wm-input" id="cEmail" name="cEmail" required />
+                <div class="wm-invalid" data-err="cEmail"></div>
+              </div>
+              <div class="col-md-6">
+                <label for="cPhone" class="form-label wm-label">Phone</label>
+                <input type="text" class="form-control wm-input" id="cPhone" name="cPhone" required />
+                <div class="wm-invalid" data-err="cPhone"></div>
+              </div>
+              <div class="col-md-6">
+                <label for="cPosition" class="form-label wm-label">Ideal Position</label>
+                <input type="text" class="form-control wm-input" id="cPosition" name="cPosition" required />
+                <div class="wm-invalid" data-err="cPosition"></div>
+              </div>
+
+              <div class="col-12">
+                <label for="cMessage" class="form-label wm-label">What would excellence look like for you?</label>
+                <textarea class="form-control wm-input" id="cMessage" name="cMessage" rows="4" required></textarea>
+                <div class="wm-invalid" data-err="cMessage"></div>
+              </div>
+            </div>
+
+            <div class="wm-form-status mt-3" id="customStatus" role="status" aria-live="polite"></div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="button" class="btn wm-btn wm-btn-outline" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn wm-btn wm-btn-gold wm-btn-glow wm-btn-ripple" data-ripple>Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================
+       NEED HELP BUTTON (copied EXACTLY from Blog)
+  ==================================== -->
+
+  <a href="https://wa.me/917899663405?text=Hello%20I%20need%20help%20with%20an%20event." target="_blank" class="need-help-btn">
+    <i class="fab fa-whatsapp"></i>Need Help?</a>
+
+  <!-- ===================================
+       PREMIUM FOOTER (copied EXACTLY from Blog)
+  ==================================== -->
+  <footer class="footer-premium">
+
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- COLUMN 1 -->
+        <div class="footer-column reveal">
+          <h3 class="footer-logo">EventSphere</h3>
+          <h5>Follow Our Journey</h5>
+          <div class="social-icons">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+          <h6>Location</h6>
+          <p>Bangalore, India</p>
+        </div>
+
+        <!-- COLUMN 2 -->
+        <div class="footer-column reveal">
+          <h4>Our Services</h4>
+          <ul>
+            <li>Corporate Events</li>
+            <li>Conferences</li>
+            <li>Celebrations</li>
+            <li>Inaugurations</li>
+            <li>Hybrid Events</li>
+            <li>Special Projects</li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 3 -->
+        <div class="footer-column reveal">
+          <h4>Company</h4>
+          <ul>
+            <li>Home</li>
+            <li>Services</li>
+            <li>Works</li>
+            <li>Clients</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+
+        <!-- COLUMN 4 -->
+        <div class="footer-column reveal">
+          <h4>Get In Touch</h4>
+          <p>info@eventsphere.com</p>
+          <div class="footer-map-wrap">
+            <div class="map-box">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3887.5192203432025!2d77.550553374842!3d13.002573387315648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1781620434450!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style="border:0; border-radius:20px; width:100%; height:100%; min-height:320px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./Careers.js"></script>
+</body>
+</html>
+
+
+
+

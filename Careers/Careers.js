@@ -1,0 +1,498 @@
+/* ==========================================================
+   Premium Corporate Careers - Vanilla JS
+   - Dynamic job card rendering from arrays
+   - Apply + Custom Role Bootstrap modals with validation
+   - IntersectionObserver: scroll reveal + count-up
+   - Ripple effect
+   - Timeline progress fill for Employee Journey
+   ========================================================== */
+
+(function () {
+  "use strict";
+
+  // Helpers
+  function $(selector) {
+    return document.querySelector(selector);
+  }
+
+  function $all(selector) {
+    return Array.from(document.querySelectorAll(selector));
+  }
+
+  function clamp(n, min, max) {
+    return Math.max(min, Math.min(max, n));
+  }
+
+  function formatNumber(n) {
+    const num = Number(n);
+    if (!Number.isFinite(num)) return "0";
+    return num.toLocaleString("en-US");
+  }
+
+  // ==============================
+  // Ripple effect
+  // ==============================
+  function attachRipple() {
+    const buttons = $all("[data-ripple]");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", function (e) {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const span = document.createElement("span");
+        span.className = "wm-ripple";
+        span.style.left = x + "px";
+        span.style.top = y + "px";
+
+        btn.appendChild(span);
+
+        setTimeout(function () {
+          if (span && span.parentNode) span.parentNode.removeChild(span);
+        }, 680);
+      });
+    });
+  }
+
+  // ==============================
+  // Scroll reveal (IntersectionObserver)
+  // ==============================
+  function initScrollReveal() {
+    const revealEls = $all("[data-reveal]");
+
+    const staggerEls = $all('[data-reveal="stagger"]');
+    staggerEls.forEach((el, idx) => {
+      el.style.transitionDelay = (idx * 90) + "ms";
+    });
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    revealEls.forEach((el) => observer.observe(el));
+  }
+
+  // ==============================
+  // Count up (IntersectionObserver + setInterval)
+  // ==============================
+  function initCountUp() {
+    const countWraps = $all("[data-count]");
+    if (!countWraps.length) return;
+
+    const spans = $all(".wm-count");
+    if (!spans.length) return;
+
+    let started = false;
+
+    const observer = new IntersectionObserver(function (entries) {
+      const anyVisible = entries.some((e) => e.isIntersecting);
+      if (!anyVisible || started) return;
+      started = true;
+
+      spans.forEach((span) => {
+        const target = parseInt(span.getAttribute("data-target"), 10);
+        const duration = 1600;
+        const steps = 30;
+        const stepTime = Math.floor(duration / steps);
+        const increment = Math.ceil(target / steps);
+
+        let current = 0;
+        span.textContent = "0";
+
+        const timer = setInterval(function () {
+          current = current + increment;
+          if (current >= target) {
+            span.textContent = formatNumber(target);
+            clearInterval(timer);
+            return;
+          }
+          span.textContent = formatNumber(current);
+        }, stepTime);
+      });
+
+    }, { threshold: 0.35 });
+
+    countWraps.forEach((w) => observer.observe(w));
+  }
+
+  // ==============================
+  // Dynamic Job Cards
+  // ==============================
+  const jobs = [
+    {
+      department: "Client Servicing",
+      title: "Client Servicing Manager",
+      experience: "3–6 Years",
+      location: "Hyderabad",
+      salary: "$60K–$85K",
+      description: "Lead client communication, oversee project timelines, and deliver premium experiences with high precision."
+    },
+    {
+      department: "Production",
+      title: "Event Production Executive",
+      experience: "2–4 Years",
+      location: "Bengaluru",
+      salary: "$45K–$65K",
+      description: "Coordinate production details, vendors, and on-ground execution to ensure flawless event outcomes."
+    },
+    {
+      department: "Design",
+      title: "Motion Graphic Designer",
+      experience: "1–3 Years",
+      location: "Remote (India)",
+      salary: "$35K–$55K",
+      description: "Create polished motion visuals for campaigns—clean timing, premium transitions, and brand consistency."
+    },
+    {
+      department: "Business Development",
+      title: "Business Development Executive",
+      experience: "2–5 Years",
+      location: "Delhi NCR",
+      salary: "$50K–$80K",
+      description: "Drive client acquisition through strategic outreach, relationship-building, and measurable pipeline growth."
+    },
+    {
+      department: "Creative",
+      title: "Creative Strategist",
+      experience: "4–7 Years",
+      location: "Mumbai",
+      salary: "$70K–$105K",
+      description: "Own creative direction, align messaging, and craft strategy that turns ideas into standout experiences."
+    },
+    {
+      department: "Operations",
+      title: "Event Coordinator",
+      experience: "1–3 Years",
+      location: "Chennai",
+      salary: "$30K–$50K",
+      description: "Support planning and execution—keep schedules tight and details correct from start to finish."
+    }
+  ];
+
+  function renderJobs() {
+    const grid = $("#jobsGrid");
+    if (!grid) return;
+
+    let html = "";
+
+    for (let i = 0; i < jobs.length; i++) {
+      const job = jobs[i];
+
+      html += `
+        <div class="col-md-6 col-lg-4">
+          <article class="wm-job-card reveal-up" data-reveal="up">
+            <div class="wm-job-top">
+              <div class="wm-job-dept-badge">${job.department}</div>
+              <div class="wm-job-dept-badge" title="Experience">${job.experience}</div>
+            </div>
+
+            <h3 class="wm-job-title">${job.title}</h3>
+
+            <div class="wm-job-meta">
+              <span aria-label="Location">📍 ${job.location}</span>
+              <span aria-label="Salary">💰 ${job.salary}</span>
+            </div>
+
+            <p class="wm-job-desc">${job.description}</p>
+
+            <button type="button" class="btn wm-btn wm-btn-gold wm-btn-glow wm-btn-ripple wm-job-apply" data-ripple data-apply-title="${job.title}">
+              Apply
+            </button>
+          </article>
+        </div>
+      `;
+    }
+
+    grid.innerHTML = html;
+
+    const applyButtons = $all('[data-apply-title]');
+    applyButtons.forEach((btn) => {
+      btn.addEventListener("click", function () {
+        const title = btn.getAttribute("data-apply-title") || "";
+        const positionInput = $("#position");
+        if (positionInput) positionInput.value = title;
+        openModalById("applyModal");
+      });
+    });
+  }
+
+  // ==============================
+  // Modals
+  // ==============================
+  function openModalById(id) {
+    const el = $("#" + id);
+    if (!el) return;
+
+    const Modal = window.bootstrap ? window.bootstrap.Modal : null;
+    if (!Modal) return;
+
+    const instance = Modal.getInstance(el) || new Modal(el);
+    instance.show();
+  }
+
+  function closeModalById(id) {
+    const el = $("#" + id);
+    if (!el) return;
+
+    const Modal = window.bootstrap ? window.bootstrap.Modal : null;
+    if (!Modal) return;
+
+    const instance = Modal.getInstance(el);
+    if (instance) instance.hide();
+  }
+
+  // ==============================
+  // Form validation
+  // ==============================
+  function setFieldError(fieldKey, message) {
+    const errEl = $(".wm-invalid[data-err='" + fieldKey + "']");
+    if (!errEl) return;
+    errEl.textContent = message || "";
+  }
+
+  function clearFormErrors(formEl) {
+    if (!formEl) return;
+    const errEls = $all(".wm-invalid");
+    errEls.forEach((e) => { e.textContent = ""; });
+  }
+
+  function showStatus(statusEl, type, text) {
+    if (!statusEl) return;
+    statusEl.classList.remove("is-success", "is-error");
+    if (type === "success") statusEl.classList.add("is-success");
+    if (type === "error") statusEl.classList.add("is-error");
+    statusEl.textContent = text;
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function validatePhone(phone) {
+    return /^[0-9+()\-\s]{7,}$/.test(phone);
+  }
+
+  function initForms() {
+    const applyForm = $("#applyForm");
+    const customForm = $("#customForm");
+
+    const applyStatus = $("#applyStatus");
+    const customStatus = $("#customStatus");
+
+    const applyFields = {
+      fullName: $("#fullName"),
+      email: $("#email"),
+      phone: $("#phone"),
+      position: $("#position"),
+      resume: $("#resume"),
+      message: $("#message")
+    };
+
+    const customFields = {
+      cName: $("#cName"),
+      cEmail: $("#cEmail"),
+      cPhone: $("#cPhone"),
+      cPosition: $("#cPosition"),
+      cMessage: $("#cMessage")
+    };
+
+    if (applyForm) {
+      applyForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        clearFormErrors(applyForm);
+
+        if (applyStatus) {
+          applyStatus.textContent = "";
+          applyStatus.className = "wm-form-status";
+        }
+
+        const fullName = (applyFields.fullName && applyFields.fullName.value.trim()) || "";
+        const email = (applyFields.email && applyFields.email.value.trim()) || "";
+        const phone = (applyFields.phone && applyFields.phone.value.trim()) || "";
+        const position = (applyFields.position && applyFields.position.value.trim()) || "";
+        const message = (applyFields.message && applyFields.message.value.trim()) || "";
+        const resumeFiles = applyFields.resume ? applyFields.resume.files : null;
+
+        let ok = true;
+
+        if (fullName.length < 2) { setFieldError("fullName", "Please enter your full name."); ok = false; }
+        if (!validateEmail(email)) { setFieldError("email", "Please enter a valid email."); ok = false; }
+        if (!validatePhone(phone)) { setFieldError("phone", "Please enter a valid phone number."); ok = false; }
+        if (position.length < 2) { setFieldError("position", "Please enter the position you’re applying for."); ok = false; }
+        if (!resumeFiles || resumeFiles.length === 0) { setFieldError("resume", "Please upload your resume (PDF/DOC/DOCX)." ); ok = false; }
+        if (message.length < 10) { setFieldError("message", "Please add a short message (at least 10 characters)." ); ok = false; }
+
+        if (!ok) {
+          showStatus(applyStatus, "error", "Please fix the highlighted fields and try again.");
+          return;
+        }
+
+        showStatus(applyStatus, "success", "Application submitted successfully. We’ll contact you soon.");
+
+        setTimeout(function () {
+          applyForm.reset();
+          showStatus(applyStatus, "success", "Application submitted successfully. We’ll contact you soon.");
+          closeModalById("applyModal");
+        }, 900);
+      });
+    }
+
+    if (customForm) {
+      customForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        clearFormErrors(customForm);
+
+        if (customStatus) {
+          customStatus.textContent = "";
+          customStatus.className = "wm-form-status";
+        }
+
+        const cName = (customFields.cName && customFields.cName.value.trim()) || "";
+        const cEmail = (customFields.cEmail && customFields.cEmail.value.trim()) || "";
+        const cPhone = (customFields.cPhone && customFields.cPhone.value.trim()) || "";
+        const cPosition = (customFields.cPosition && customFields.cPosition.value.trim()) || "";
+        const cMessage = (customFields.cMessage && customFields.cMessage.value.trim()) || "";
+
+        let ok = true;
+
+        if (cName.length < 2) { setFieldError("cName", "Please enter your full name."); ok = false; }
+        if (!validateEmail(cEmail)) { setFieldError("cEmail", "Please enter a valid email."); ok = false; }
+        if (!validatePhone(cPhone)) { setFieldError("cPhone", "Please enter a valid phone number."); ok = false; }
+        if (cPosition.length < 2) { setFieldError("cPosition", "Please enter the ideal position." ); ok = false; }
+        if (cMessage.length < 10) { setFieldError("cMessage", "Please describe the role (at least 10 characters)." ); ok = false; }
+
+        if (!ok) {
+          showStatus(customStatus, "error", "Please fix the highlighted fields and try again.");
+          return;
+        }
+
+        showStatus(customStatus, "success", "Request submitted successfully. We’ll connect you to the right team.");
+
+        setTimeout(function () {
+          customForm.reset();
+          closeModalById("customModal");
+        }, 900);
+      });
+    }
+  }
+
+  // ==============================
+  // Buttons -> smooth scroll / modals
+  // ==============================
+  function initButtons() {
+    const btnExplore = $("#btnExplore");
+    const btnLearn = $("#btnLearn");
+    const btnApply = $("#btnApply");
+    const btnQuickApply = $("#btnQuickApply");
+
+    const btnCustom = $("#btnCustom");
+    const btnFinalApply = $("#btnFinalApply");
+    const btnFinalCustom = $("#btnFinalCustom");
+
+    function scrollToId(id) {
+      const el = $("#" + id);
+      if (!el) return;
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    if (btnExplore) btnExplore.addEventListener("click", function () { scrollToId("jobs"); });
+    if (btnLearn) btnLearn.addEventListener("click", function () { scrollToId("why"); });
+
+    if (btnApply) btnApply.addEventListener("click", function () { openModalById("applyModal"); });
+    if (btnQuickApply) btnQuickApply.addEventListener("click", function () { openModalById("applyModal"); });
+
+    if (btnCustom) btnCustom.addEventListener("click", function () { openModalById("customModal"); });
+    if (btnFinalApply) btnFinalApply.addEventListener("click", function () { openModalById("applyModal"); });
+    if (btnFinalCustom) btnFinalCustom.addEventListener("click", function () { openModalById("customModal"); });
+  }
+
+  // ==============================
+  // Timeline progress fill (scroll event)
+  // ==============================
+  function updateJourneyProgress() {
+    const fill = $("#journeyFill");
+    const section = $("#journey");
+    if (!fill || !section) return;
+
+    const rect = section.getBoundingClientRect();
+    const viewH = window.innerHeight;
+
+    const start = viewH * 0.85;
+    const end = viewH * 0.25;
+    const t = clamp((start - rect.top) / (start - end), 0, 1);
+
+    fill.style.width = (t * 100).toFixed(1) + "%";
+  }
+
+  // ==============================
+  // Infinite floating decor (setInterval)
+  // ==============================
+  function initFloatingDecorations() {
+    const circles = $all(".wm-circle");
+    const blobs = $all(".wm-blob");
+    const all = circles.concat(blobs);
+    if (!all.length) return;
+
+    setInterval(function () {
+      for (let i = 0; i < all.length; i++) {
+        const el = all[i];
+        const dx = (Math.random() - 0.5) * 10;
+        const dy = (Math.random() - 0.5) * 10;
+        el.style.transform = "translate(" + dx.toFixed(1) + "px," + dy.toFixed(1) + "px)";
+      }
+    }, 2200);
+  }
+
+  // ==============================
+  // Boot
+  // ==============================
+  function initWhatsAppPulse() {
+    const helpBtn = document.querySelector(".need-help-btn");
+    if (!helpBtn) return;
+
+    function startPulse() {
+      helpBtn.classList.add("pulse");
+      window.setTimeout(function () {
+        helpBtn.classList.remove("pulse");
+      }, 1100);
+    }
+
+    window.setTimeout(function () {
+      startPulse();
+    }, 600);
+
+    window.setInterval(function () {
+      startPulse();
+    }, 4200);
+  }
+
+  function boot() {
+    attachRipple();
+    renderJobs();
+
+    initScrollReveal();
+    initCountUp();
+
+    initButtons();
+    initForms();
+
+    initFloatingDecorations();
+    initWhatsAppPulse();
+
+    window.addEventListener("scroll", function () {
+      updateJourneyProgress();
+    });
+
+    updateJourneyProgress();
+  }
+
+
+  document.addEventListener("DOMContentLoaded", boot);
+})();
+
