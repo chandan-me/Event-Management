@@ -1,0 +1,414 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f9fa;
+    overflow-x:hidden;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+section{
+    padding:100px 0;
+}
+
+.section-heading span{
+    background:#f4a825;
+    color:#000;
+    padding:10px 25px;
+    border-radius:30px;
+    font-weight:600;
+    display:inline-block;
+    margin-bottom:70px;
+}
+
+.section-heading h2{
+    font-size:3rem;
+    font-weight:700;
+    color:#173b7a;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.launch-hero{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.launch-hero video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:white;
+    max-width:1000px;
+    margin:auto;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:30px;
+    background:#f4a825;
+    color:#000;
+    font-weight:600;
+}
+
+.hero-content h1{
+    font-size:5rem;
+    font-weight:800;
+    margin-top:25px;
+    text-shadow:0 4px 20px rgba(0,0,0,.4);
+        font-family: 'Montserrat', sans-serif;
+        opacity: 0.5;
+  
+
+
+}
+
+
+.hero-content h1 span{
+    color:#f4a825;
+}
+
+.hero-content p{
+    max-width:800px;
+    margin:25px auto;
+    font-size:1.2rem;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.hero-buttons .btn{
+    transition:.4s ease;
+}
+
+.hero-buttons .btn:hover{
+    transform:translateY(-5px);
+}
+/* =========================
+   STATS
+========================= */
+
+.stats-section{
+    margin-top:-10px;
+    position:relative;
+    z-index:5;
+}
+
+.stat-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:20px 20px 5px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.stat-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    background:#f4a825;
+    color:white;
+}
+
+.stat-card h2{
+    font-size:3rem;
+    font-weight:800;
+    color:#173b7a;
+}
+
+.stat-card p{
+    margin:0;
+    font-weight:500;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.launch-services{
+    background:white;
+}
+
+.launch-card{
+    background:#fff;
+    border-radius:25px;
+    padding:20px;
+    text-align:center;
+    box-shadow:10px 10px 0px rgba(0,0,0,.08);
+    transition:.4s;
+    height:100%;
+}
+
+.launch-card:hover{
+    transform:translateY(-12px) scale(1.03);
+    background:#173b7a;
+    color:white;
+}
+
+.launch-card:hover i{
+    color:#f4a825;
+}
+
+.launch-card i{
+    font-size:50px;
+    color:#173b7a;
+    margin-bottom:20px;
+    transition:.4s;
+}
+
+.launch-card h4{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.process-section{
+    background:#173b7a;
+}
+
+.process-section .section-heading h2{
+    color:white;
+}
+
+.process-card{
+    background:white;
+    padding:40px 20px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+    margin-bottom:20px;
+    min-height:20px;
+    transition:all .4s ease;
+    cursor:pointer;
+
+}
+
+.process-card h5{
+    transition:.4s;
+}
+
+.process-card:hover li{
+    color:#f4a825;
+}
+
+
+.process-card:hover{
+    transform:translateY(-15px) scale(1.03);
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+.step{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#173b7a;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-size:25px;
+    font-weight:700;
+    transition:.4s;
+}
+
+.process-card:hover .step{
+    background:#f4a825;
+    color:#173b7a;
+}
+
+.process-card h5{
+    margin-top:20px;
+    font-weight:700;
+     font-size:2rem;
+}
+
+.process-card ul{
+    list-style:none;
+    padding:0;
+    margin-top:20px;
+}
+
+.process-card ul li{
+    font-size:1.2rem;
+    font-weight:500;
+    margin:15px 0;
+    color:#555;
+     transition:.4s;
+}
+.process-card ul li::before{
+    content:"•";
+    color:#f4a825;
+    font-weight:bold;
+    margin-right:8px;
+}
+
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:25px;
+    transition:.5s;
+}
+
+.gallery-img:hover{
+    transform:scale(1.08);
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+/* =========================
+   CTA
+========================= */
+
+.cta-section{
+    background:linear-gradient(
+        135deg,
+        #173b7a,
+        #0e2550
+    );    
+    color:white;
+    text-align:center;
+}
+
+.cta-section h2{
+    font-size:3rem;
+    font-weight:800;
+}
+
+.cta-section p{
+    margin:20px 0;
+    font-size:1.1rem;
+}
+
+#loader.fade-out{
+    opacity:0;
+    visibility:hidden;
+    transition:.5s;
+}
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    .hero-content h1{
+        font-size:3.5rem;
+    }
+
+    .section-heading h2{
+        font-size:2.3rem;
+    }
+}
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .section-heading h2{
+        font-size:2rem;
+    }
+
+    .gallery-img{
+        height:250px;
+    }
+}
+
+#loader{
+    position:fixed;
+    inset:0;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader-spinner{
+    width:60px;
+    height:60px;
+    border:6px solid #ddd;
+    border-top:6px solid #f4a825;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+#backToTop{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#f4a825;
+    color:black;
+    font-size:20px;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+    transition:.4s;
+}
+
+#backToTop:hover{
+    transform:translateY(-5px);
+}
+
+@media(max-width:768px){
+
+    .stat-card{
+        margin-bottom:20px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+}
