@@ -1,14 +1,7 @@
-// ============================================================
-//  DCL EVENT MANAGEMENT — home1.js
-// ============================================================
-
-// AOS — Scroll animations
 AOS.init({
     duration: 1000,
     once: true
 });
-
-// ---- SCROLL PROGRESS BAR ----
 window.addEventListener("scroll", () => {
     let scrollTop    = document.documentElement.scrollTop;
     let scrollHeight = document.documentElement.scrollHeight
@@ -16,8 +9,6 @@ window.addEventListener("scroll", () => {
     let progress     = (scrollTop / scrollHeight) * 100;
     document.getElementById("progress").style.width = progress + "%";
 });
-
-// ---- NAVBAR SHADOW ON SCROLL ----
 window.addEventListener("scroll", () => {
     const navbar = document.querySelector(".custom-navbar");
     if (window.scrollY > 50) {
@@ -26,28 +17,30 @@ window.addEventListener("scroll", () => {
         navbar.style.boxShadow = "none";
     }
 });
-
-// ---- SERVICE CARD "VIEW DETAILS" TOGGLE ----
 const buttons = document.querySelectorAll(".details-btn");
-buttons.forEach(button => {
+butons.forEach(button => {
     button.addEventListener("click", () => {
-        const details = button.nextElementSibling;
-        details.classList.toggle("show");
-        if (details.classList.contains("show")) {
+        const currentDetails = button.nextElementSibling;
+        document.querySelectorAll(".event-details").forEach(details => {
+            if(details !== currentDetails){
+                details.classList.remove("show");
+                details.previousElementSibling.innerText = "View Details";
+            }
+        });
+        currentDetails.classList.toggle("show");
+        if(currentDetails.classList.contains("show")){
             button.innerText = "Hide Details";
-        } else {
+        }
+        else{
             button.innerText = "View Details";
         }
     });
 });
-
-// ---- COUNTER ANIMATION FOR STATS ----
 function animateCounter(el) {
     const target   = parseInt(el.getAttribute("data-target"));
     const duration = 2000;
     const step     = target / (duration / 16);
     let   current  = 0;
-
     const timer = setInterval(() => {
         current += step;
         if (current >= target) {
@@ -57,8 +50,6 @@ function animateCounter(el) {
         el.textContent = Math.floor(current);
     }, 16);
 }
-
-// Start counters when the stats section enters the viewport
 const statsSection = document.querySelector(".stats-section");
 if (statsSection) {
     const observer = new IntersectionObserver((entries) => {
@@ -71,8 +62,6 @@ if (statsSection) {
     }, { threshold: 0.3 });
     observer.observe(statsSection);
 }
-
-// ---- CONTACT FORM SUBMIT (basic feedback) ----
 const submitBtn = document.querySelector(".submit-btn");
 if (submitBtn) {
     submitBtn.addEventListener("click", () => {
@@ -97,73 +86,68 @@ if (submitBtn) {
     });
 }
 const members = {
-
     hari:{
-        img:"hari.png",
+        img:"hari.jpeg",
         name:"Hari Krishna S",
         role:"Wedding Specialist",
         location:"Bangalore",
-        work:"Remote",
-        phone:"+91 9876543210",
+        work:"Office",
+        phone:"+91 8861662202",
         desc:"Passionate developer and event specialist dedicated to creating memorable experiences.",
-        linkedin:"#",
-        github:"#",
-        instagram:"#",
-        email:"hari@gmail.com"
+        achievements:["🏆 Designed and executed 50+ successful event themes", "🏆 Led branding campaigns for premium corporate events", "🏆 Increased attendee engagement through creative experiences", "🏆 Recognized for innovative event design excellence"],
+        linkedin:"https://www.linkedin.com/in/hari-krishna-s-2023a8311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github:"https://github.com/chandan-me/Event-Management",
+        instagram:"https://www.instagram.com/harish_krishna_75?igsh=MXZsNTl2anNpbjFoOQ=",
+        email:"hari.krishna.sk.05@gmail.com"
     },
-
     chaluva:{
         img:"chaluva.jpeg",
         name:"Chaluva Shetty",
-        role:"Creative Director",
+        role:"Client Relations Manager",
         location:"Bangalore",
         work:"Office",
-        phone:"+91 9876543211",
+        phone:"+91 7899663405",
         desc:"Leads creative planning and event branding.",
-        linkedin:"#",
-        github:"#",
-        instagram:"#",
-        email:"chaluva@gmail.com"
+        achievements:["🏆 Maintained 98% client satisfaction rate","🏆 Successfully handled high-profile corporate clients","🏆 Increased repeat client bookings and referrals"],
+        linkedin:"https://www.linkedin.com/in/chaluvaraj-n-04a661313?utm_source=share_via&utm_content=profile&utm_medium=member_androi",
+        github:"https://github.com/chandan-me/Event-Management",
+        instagram:"https://www.instagram.com/chaluva_shetty?igsh=MXZsNTl2anNpbjFoOQ=",
+        email:"chaluvashetty23@gmail.com "
     },
-
     ujwal:{
         img:"ujwal.png",
         name:"Ujwal D",
         role:"Event Strategist",
-        location:"Mysore",
-        work:"Hybrid",
-        phone:"+91 9876543212",
+        location:"Bengaluru",
+        work:"Office",
+        phone:"+91 73491 73075",
         desc:"Expert in event strategy and execution.",
-        linkedin:"#",
-        github:"#",
-        instagram:"#",
-        email:"ujwal@gmail.com"
+        achievements:["🏆 Successfully planned and managed 100+ events","🏆 Achieved 95% on-time event delivery rate","🏆 Optimized event budgets while maintaining quality"],
+        linkedin:"https://www.linkedin.com/in/ujwal-d-2023a8311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github:"https://github.com/chandan-me/Event-Management",
+        instagram:"https://www.instagram.com/_ujwal_23?igsh=MXRrNmp4YWZsZHo1ag==",
+        email:"ujwaldhananjaya@gmail.com "
     },
-
     chandan:{
         img:"chandan.png",
         name:"Chandan N",
         role:"Operations Head",
-        location:"Tumkur",
+        location:"Bengaluru",
         work:"Office",
         phone:"+91 9876543213",
         desc:"Manages logistics and event operations.",
-        linkedin:"#",
-        github:"#",
-        instagram:"#",
-        email:"chandan@gmail.com"
+        achievements:[" 🏆 Managed logistics for large-scale events with 5000+ attendees","🏆 Coordinated multi-city event operations successfully.","🏆 Reduced operational costs through efficient planning.","🏆 Maintained seamless event execution with minimal disruptions"], 
+        linkedin:"https://www.linkedin.com/in/chandan-niranjan/",
+        github:"https://github.com/chandan-me/Event-Management",
+        instagram:"https://www.instagram.com/chandan_niranjan?igsh=MXZsNTl2anNpbjFoOQ=",
+        email:"chandan2004.n@gmail.com"
     }
 };
-
 const cards = document.querySelectorAll(".team-card");
 const modal = document.getElementById("memberModal");
-
 cards.forEach(card=>{
-
     card.addEventListener("click",()=>{
-
         const member = members[card.dataset.member];
-
         document.getElementById("modalImg").src = member.img;
         document.getElementById("modalName").textContent = member.name;
         document.getElementById("modalRole").textContent = member.role;
@@ -171,28 +155,19 @@ cards.forEach(card=>{
         document.getElementById("modalWork").textContent = member.work;
         document.getElementById("modalPhone").textContent = member.phone;
         document.getElementById("modalDesc").textContent = member.desc;
-
+        document.getElementById("modalAchievements").innerHTML = member.achievements.map(ach => `<li>${ach}</li>`).join("");
         document.getElementById("modalLinkedin").href = member.linkedin;
         document.getElementById("modalGithub").href = member.github;
         document.getElementById("modalInstagram").href = member.instagram;
         document.getElementById("modalEmail").href = `mailto:${member.email}`;
-
         modal.classList.add("active");
-
     });
-
 });
-
 document.querySelector(".close-modal").addEventListener("click",()=>{
-
     modal.classList.remove("active");
-
 });
-
 window.addEventListener("click",(e)=>{
-
     if(e.target===modal){
         modal.classList.remove("active");
     }
-
 });
