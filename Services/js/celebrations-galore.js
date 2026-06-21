@@ -199,3 +199,4 @@ setInterval(() => {
 
     images[current].classList.add('active');
 }, 3000);
+
