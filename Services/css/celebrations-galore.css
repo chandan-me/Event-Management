@@ -115,11 +115,6 @@ body{
     font-weight:700;
 }
 
-.hero-content h1{
-    font-size:80px;
-    font-weight:900;
-    margin-top:25px;
-}
 
 .hero-content h1 span{
     color:#f4a825;
@@ -130,7 +125,7 @@ body{
     max-width:850px;
     margin:auto;
     margin-top:25px;
-    color:#ddd;
+    color:#e31414;
 }
 
 .hero-buttons{
