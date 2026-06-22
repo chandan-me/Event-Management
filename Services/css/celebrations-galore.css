@@ -85,6 +85,25 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+/* ==========================
+   NAVBAR
+
+
+
+/* ==========================
+   HERO
+
+.celebration-hero{
+    height:100vh;
+    background:url("../images/Celebration\ Galore\ \(1\).avif") no-repeat;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
 .overlay {
@@ -113,6 +132,24 @@ body {
     font-weight: 900;
     margin-top: 25px;
 }
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:white;
+    font-weight:700;
+    font-size:1.2em;
+      transform: translateY(-120px);
+}
+
+.hero-badge{
+    display:inline-block;
+    background:#d98a3f;
+    color:black;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:700;
+}
+
 
 .hero-content h1 span {
     color: #f4a825;
@@ -124,6 +161,12 @@ body {
     margin: auto;
     margin-top: 25px;
     color: #ddd;
+.hero-content p{
+    font-size:24px;
+    max-width:850px;
+    margin:auto;
+    margin-top:25px;
+    color:#e6dede;
 }
 
 .hero-buttons {
@@ -270,6 +313,54 @@ body {
 .counter {
     font-size: 70px;
     font-weight: 900;
+/* image flip container */
+
+.image-flip-container{
+    position: relative;
+    width: 700px;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.image-flip-container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+
+    opacity: 0;
+    transform: rotateY(90deg);
+    transition: all 1s ease-in-out;
+}
+
+.image-flip-container img.active{
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.image-flip-container img{
+    transform: rotateY(180deg);
+}
+
+.image-flip-container img.active{
+    transform: rotateY(0deg);
+}
+/* ==========================
+   STATS
+
+.stats-section{
+    padding:120px 0;
+    background:#eb9604;
+    color:white;
+    text-align:center;
+}
+
+.counter{
+    font-size:70px;
+    font-weight:900;
+    color:#D4AF37;
+    transition:.5s;
 }
 
 .stats-section h5 {
@@ -422,6 +513,24 @@ body {
 
 .about-celebration {
     padding-top: 180px;
+/* ==========================
+   FLOATING STATS
+.floating-stats{
+    position:absolute;
+    bottom:-80px;
+    left:50%;
+
+    transform: translate(-50%, -70%);
+
+    z-index:2;
+
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.about-celebration{
+    padding-top:180px;
 }
 
 .stat-card {
@@ -672,6 +781,27 @@ body {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 20px;
+.process-card{
+    transition:0.4s ease;
+}
+
+.process-card:hover{
+    transform:translateY(-20px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.timeline-item h3{
+    transition:0.4s ease;
+}
+
+.timeline-item:hover h3{
+    color:#f4a825;
+}
+
+.timeline-item h3{
+    color:#223a6b;
+    font-weight:700;
+    margin-bottom:20px;
 }
 
 .timeline-item h3 {
@@ -729,3 +859,8 @@ body {
     color: #223a6b;
     font-weight: 700;
 }
+.highlight-card h4{
+    color:#223a6b;
+    font-weight:700;
+}
+

@@ -1,0 +1,644 @@
+:root{
+    --primary:#21207a;
+    --gold:#D4AF37;
+    --cream:#FFF8F0;
+}
+
+body{
+background:var(--cream);
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+}
+
+:root{
+    --primary:#202d7a;
+    --gold:#D4AF37;
+    --cream:#FFF8F0;
+}
+
+.wedding-timeline-section{
+    padding:120px 0;
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #fff3e6
+    );
+    position:relative;
+    overflow:hidden;
+}
+
+.section-header h2{
+    font-size:3rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+.section-header p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+}
+
+.subtitle{
+    color:var(--gold);
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.timeline{
+    position:relative;
+    margin-top:80px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(
+        90deg,
+        #d4af37,
+        #ffd700,
+        #d4af37
+    );
+    transform:translateY(-50%);
+}
+
+.timeline{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.timeline-step{
+    position:relative;
+    width:15%;
+    text-align:center;
+    z-index:2;
+}
+
+.circle{
+    width:90px;
+    height:90px;
+    background:white;
+    border:4px solid var(--gold);
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+    font-weight:700;
+    color:var(--primary);
+    box-shadow:0 0 25px rgba(212,175,55,.4);
+    transition:.4s;
+}
+
+.content{
+    margin-top:25px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.content h4{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.content p{
+    font-size:14px;
+    color:#666;
+}
+
+.timeline-step:hover .circle{
+    transform:translateY(-10px) scale(1.1);
+    box-shadow:0 0 40px rgba(212,175,55,.8);
+}
+
+.timeline-step:hover .content{
+    transform:translateY(-10px);
+}
+
+.circle::before{
+    content:"💖";
+    position:absolute;
+    top:-25px;
+    font-size:24px;
+    animation:heartFloat 3s infinite ease-in-out;
+}
+
+@keyframes heartFloat{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@media(max-width:991px){
+
+.timeline{
+    flex-direction:column;
+}
+
+.timeline::before{
+    width:6px;
+    height:100%;
+    left:50%;
+    top:0;
+    transform:none;
+}
+
+.timeline-step{
+    width:100%;
+}
+}
+
+#planBtn{
+    animation:fadeText 1s ease forwards;
+    animation-delay:1s;
+    background:var(--gold);
+    color:white;
+    padding:12px 30px;
+    font-weight: bolder;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.hero-video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:fill;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0, 0, 0, 0.5);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero-title{
+font-size:4rem;
+font-weight:700;
+animation:fadeUp 1s ease forwards;
+color: rgba(255,255,255,0.75);
+ letter-spacing: 2px;
+ 
+}
+
+@keyframes fadeText{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:.8;
+        transform:translateY(0);
+    }
+}
+
+.hero-subtitle{
+font-size:1.5rem;
+margin-top:20px;
+}
+
+.btn-gold{
+background:var(--gold);
+color:white;
+padding:12px 30px;
+border:none;
+}
+
+/* SERVICES */
+
+.service-card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(20px);
+padding:40px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+position:relative;
+overflow:hidden;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 40px var(--gold);
+}
+
+.service-card i{
+font-size:40px;
+color:var(--gold);
+margin-bottom:15px;
+}
+
+/* TIMELINE */
+
+.timeline{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+position:relative;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+top:20px;
+width:100%;
+height:4px;
+background:var(--gold);
+}
+
+.timeline-item{
+background:white;
+padding:15px 20px;
+border-radius:10px;
+z-index:2;
+}
+
+/* TYPES */
+
+.type-card{
+overflow:hidden;
+border-radius:20px;
+position:relative;
+}
+
+.type-card img{
+width:100%;
+height:500px;
+object-fit:cover;
+transition:.5s;
+}
+
+.type-card:hover img{
+transform:scale(1.15);
+}
+
+.type-card h4{
+position:absolute;
+bottom:20px;
+left:20px;
+color:white;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+columns:3;
+gap:15px;
+}
+
+.gallery-grid img{
+width:100%;
+margin-bottom:15px;
+border-radius:15px;
+cursor:pointer;
+transition:.4s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.03);
+}
+
+/* STATS */
+
+.stats-section{
+background:var(--primary);
+color:white;
+padding:80px 0;
+}
+
+.counter{
+font-size:60px;
+color:var(--gold);
+}
+
+/* TESTIMONIALS */
+
+.testimonial-card{
+padding:40px;
+background:white;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+/* CTA */
+
+.cta-section{
+position:relative;
+padding:120px 0;
+background:url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc")
+center/cover;
+color:white;
+}
+
+.cta-section .overlay{
+background:rgba(0,0,0,.6);
+}
+
+.cta-section .container{
+position:relative;
+z-index:2;
+}
+
+/* PETALS */
+
+.petal{
+position:fixed;
+top:-50px;
+font-size:25px;
+animation:petals 10s linear infinite;
+color:pink;
+}
+
+@keyframes petals{
+from{
+transform:translateY(-100px) rotate(0deg);
+}
+to{
+transform:translateY(100vh) rotate(360deg);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+#topBtn{
+position:fixed;
+bottom:30px;
+right:30px;
+background:var(--gold);
+border:none;
+width:50px;
+height:50px;
+border-radius:50%;
+display:none;
+}
+
+.why-us{
+    padding:100px 0;
+    background:#fff;
+}
+
+.why-us img{
+    width:100%;
+    border-radius:25px;
+    transition:.5s;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.why-us img:hover{
+    transform:scale(1.03);
+}
+
+.why-us h2{
+    font-size:3rem;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:25px;
+}
+
+.why-us p{
+    font-size:1.1rem;
+    color:#666;
+    line-height:1.8;
+}
+
+.why-us ul{
+    margin-top:30px;
+}
+
+.why-us ul li{
+    font-size:1.1rem;
+    font-weight:500;
+    margin-bottom:18px;
+    color:var(--dark);
+    transition:.3s;
+}
+
+.why-us ul li:hover{
+    transform:translateX(10px);
+    color:var(--primary);
+}
+
+.why-us ul li::before{
+    content:"✓";
+    color:var(--gold);
+    font-weight:bold;
+    margin-right:12px;
+}
+
+.why-us::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:rgba(212,175,55,.08);
+    border-radius:50%;
+    top:50px;
+    right:50px;
+    filter:blur(80px);
+}
+
+.why-us{
+    position:relative;
+    overflow:hidden;
+}
+
+.slider-row{
+overflow:hidden;
+margin:25px 0;
+}
+
+.slide-track{
+display:flex;
+width:max-content;
+}
+
+.slide-track img{
+width: 100%;
+height:420px;
+object-fit:cover;
+margin-right:20px;
+border-radius:20px;
+}
+
+.left .slide-track{
+animation:leftMove 25s linear infinite;
+}
+
+.right .slide-track{
+animation:rightMove 25s linear infinite;
+}
+
+@keyframes leftMove{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-50%);
+}
+}
+
+@keyframes rightMove{
+0%{
+transform:translateX(-50%);
+}
+100%{
+transform:translateX(0);
+}
+}
+
+.wedding-card{
+    position:relative;
+    height:550px;
+    overflow:hidden;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.wedding-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.8s;
+}
+
+.card-overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.95),
+        rgba(0,0,0,.1)
+    );
+
+    display:flex;
+    align-items:flex-end;
+    padding:35px;
+}
+
+.card-content{
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    z-index: 2;
+    transition: .4s;
+}
+.icon{
+    font-size:40px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.card-content h3{
+    font-size:2rem;
+    font-weight:700;
+}
+
+.card-content p{
+    opacity:.85;
+    margin:15px 0;
+}
+
+.card-content a{
+    color:#D4AF37;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.wedding-card:hover img{
+    transform:scale(1.15);
+}
+
+.wedding-card:hover .card-content{
+    transform:translateY(0);
+}
+.wedding-card:hover{
+    transform:translateY(-15px);
+    box-shadow:
+    0 0 40px rgba(212,175,55,.7);
+}
+
+.premium-badge{
+    position:absolute;
+    top:135px;
+    left:25px;
+
+    background:rgba(212,175,55,.15);
+    border:1px solid rgba(212,175,55,.5);
+
+    color:#D4AF37;
+
+    padding:8px 16px;
+    border-radius:50px;
+
+    backdrop-filter:blur(10px);
+    z-index:3;
+}
+
+.section-title .subtitle{
+    color:#D4AF37;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.section-title h2{
+    font-size:4rem;
+    font-weight:700;
+    color:#7A2048;
+    position:relative;
+    display:inline-block;
+}
+
+.section-title h2::after{
+    content:'';
+    width:120px;
+    height:3px;
+    background:#D4AF37;
+    position:absolute;
+    bottom:-15px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
