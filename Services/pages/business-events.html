@@ -1,1525 +1,428 @@
+﻿
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-    <title>Corporate Event Management</title>
-
-    <!-- Bootstrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <!-- AOS -->
-
-    <link rel="stylesheet"
-        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-
-    <link rel="stylesheet"
-        href="../css/business-events.css">
-
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Event Management</title> <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="../css/business-events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<body>
-
-    <!-- PAGE LOADER -->
-
-<div class="loader">
-
-    <div class="ring"></div>
-
-    <div class="logo-loader">
-
-        WM
-
-    </div>
-
-</div>
-
-    <!-- NAVBAR -->
-
+<body> <!-- PAGE LOADER -->
+    <div class="loader">
+        <div class="ring"></div>
+        <div class="logo-loader"> WM </div>
+    </div> <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-
-        <div class="container">
-
-            <a class="navbar-brand logo"
-                href="../index.html">
-
-                DCL
-
-            </a>
-
-            <button class="navbar-toggler"
-                data-bs-toggle="collapse"
-                data-bs-target="#menu">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-            <div class="collapse navbar-collapse"
-                id="menu">
-
+        <div class="container"> <a class="navbar-brand logo" href="../index.html"> DCL </a> <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav mx-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="#">
-                            Home
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active-nav"
-                            href="../../main/Services.html">
-                            Services
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="#">
-                            Team
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="#">
-                            Work
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="#">
-                            Clients
-                        </a>
-                    </li>
-
-                </ul>
-
-                <button class="contact-btn">
-
-                    Contact Us
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </button>
-
+                    <li class="nav-item"> <a class="nav-link" href="#"> Home </a> </li>
+                    <li class="nav-item"> <a class="nav-link active-nav" href="../../main/Services.html"> Services </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Team </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Work </a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#"> Clients </a> </li>
+                </ul> <button class="contact-btn"> Contact Us <i class="fa-solid fa-arrow-right"></i> </button>
             </div>
-
         </div>
-
-    </nav>
-
-
-    <!-- HERO
-
-    <section class="hero">
-
+    </nav> <!-- HERO <section class="hero"> <div class="overlay"></div> <iframe src="https://www.youtube.com/embed/JrmHbHNAUKc?autoplay=1&mute=1&loop=1&playlist=JrmHbHNAUKc&controls=0&showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> </iframe> <div class="container"> <div class="hero-content"> <span class="hero-badge" data-aos="fade-up"> Premium Event Management Services </span> <h1 data-aos="fade-up" data-aos-delay="200"> Corporate Event Management in Bangalore </h1> <p data-aos="fade-up" data-aos-delay="400"> Transform your business gatherings into extraordinary experiences with Bangalore's leading corporate event management company. </p> <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600"> <button class="btn-primary-custom"> Get Started Today </button> <button class="btn-outline-custom"> View Portfolio </button> </div> </div> </div> </section> -->
+    <section class="hero"> <video autoplay muted loop playsinline class="bg-video">
+            <source src="video.mp4" type="video/mp4">
+        </video>
         <div class="overlay"></div>
-    <iframe
-        src="https://www.youtube.com/embed/JrmHbHNAUKc?autoplay=1&mute=1&loop=1&playlist=JrmHbHNAUKc&controls=0&showinfo=0&rel=0"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-    </iframe>
+        <div class="hero-content"> <span class="badge">Premium Event Management Services</span>
+            <h1> Corporate Event <br> Management in Bangalore </h1>
+            <p> Transform your business gatherings into extraordinary experiences. </p>
+            <div class="hero-btns"> <a href="#" class="btn-primary">Get Started Today</a> <a href="#" class="btn-secondary">View Portfolio</a> </div>
+        </div>
+    </section> <!-- EVERY EVENT IS A MASTERPIECE -->
+    <section class="masterpiece-section">
         <div class="container">
-
-            <div class="hero-content">
-
-                <span class="hero-badge"
-                    data-aos="fade-up">
-
-                    Premium Event Management Services
-
-                </span>
-
-                <h1 data-aos="fade-up"
-                    data-aos-delay="200">
-
-                    Corporate Event
-                    Management in
-                    Bangalore
-
-                </h1>
-
-                <p data-aos="fade-up"
-                    data-aos-delay="400">
-
-                    Transform your business gatherings into
-                    extraordinary experiences with Bangalore's
-                    leading corporate event management company.
-
-                </p>
-
-                <div class="hero-buttons"
-                    data-aos="fade-up"
-                    data-aos-delay="600">
-
-                    <button class="btn-primary-custom">
-
-                        Get Started Today
-
-                    </button>
-
-                    <button class="btn-outline-custom">
-
-                        View Portfolio
-
-                    </button>
-
-                </div>
-
+            <div class="section-header text-center">
+                <h2> Every Event Is A <span>Masterpiece</span> </h2>
+                <p> With over a decade of experience in Bangalore's corporate event space, we transform gatherings into landmark experiences. </p>
             </div>
-
+            <div class="row g-4"> <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="master-card"> <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200">
+                        <div class="card-content">
+                            <h4>Business Events</h4>
+                            <p> As business event management we are specialized in crafting extraordinary business conferences that inspire, educate, and propel organizations to new heights. </p>
+                            <ul>
+                                <li>Conferences</li>
+                                <li>All Hands</li>
+                                <li>Annual Kick Offs</li>
+                                <li>Summits</li>
+                                <li>Leadership Meets</li>
+                                <li>Hybrid Events</li>
+                                <li>Launches â€“ Product, Brand, Facility</li>
+                                <li>Dealer Meets</li>
+                                <li>Customer Meets</li>
+                                <li>Investor Meets </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="master-card"> <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200">
+                        <div class="card-content">
+                            <h4>Celebration Galore</h4>
+                            <p> Celebrate your success with style and distinction. At White Massif Corporate event management, we understand that corporate celebrations go beyond just marking a date on the calendar. </p>
+                            <ul>
+                                <li>Annual Day</li>
+                                <li>Theme Celebrations</li>
+                                <li>Employee Engagement</li>
+                                <li>Awards & Recognition</li>
+                                <li>Team Offsites</li>
+                                <li>Product Launches</li>
+                                <li>Gala Nights</li>
+                                <li>Family Days</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="master-card"> <img src="https://images.unsplash.com/photo-1560523159-4a9692d222ef?q=80&w=1200">
+                        <div class="card-content">
+                            <h4>Inauguration</h4>
+                            <p> We specialize in end-to-end execution of inaugurations tailored to your brand identity.From thematic dÃ©cor and entry arch setups to floral arrangements and ribbon-cutting stations, we cover it all. </p>
+                            <ul>
+                                <li>Office Launches</li>
+                                <li>Facility Tours</li>
+                                <li>CEO / Leadership Addresses</li>
+                                <li>Media & Press Briefings</li>
+                                <li>Brand Showcases</li>
+                                <li>Customized Stage & Tech Setups</li>
+                                <li>VIP Guests</li>
+                                <li>Live Streaming</li>
+                                <li>Cultural & Entertainment Segments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- Card 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="master-card"> <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200">
+                        <div class="card-content">
+                            <h4> Industry Convention, Customer & Dealers Meet </h4>
+                            <p> In an ever-evolving business landscape staying at the forefront of innovation, collaboration, and knowledge exchange is paramount. </p>
+                            <ul>
+                                <li>Industry Conventions</li>
+                                <li>Dealer Meets</li>
+                                <li>Customer Connect Programs</li>
+                                <li>Product Launches</li>
+                                <li>Dealer & Distributor Meets</li>
+                                <li>Networking Events</li>
+                                <li>Partner Appreciation Events</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- Card 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="master-card"> <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200">
+                        <div class="card-content">
+                            <h4>Hybrid Events</h4>
+                            <p> Tailor made services to seamlessly execute hybrid events, combining the best of in person and virtual components for a dynamic and engaging experience. </p>
+                            <ul>
+                                <li>Townhalls</li>
+                                <li>Virtual + In-Person Summits</li>
+                                <li>Online Product Launches</li>
+                                <li>Hybrid Conferences & Panels</li>
+                                <li>Remote Team Engagement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- Card 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="master-card"> <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1200">
+                        <div class="card-content">
+                            <h4>Special Projects</h4>
+                            <p> In a world where one-size-fits-all doesn't suffice, We design tailor-made experiences, where every detail is meticulously crafted to align with the unique vision, preferences, and objectives of our clients. </p>
+                            <ul>
+                                <li>Government & Public Sector Events</li>
+                                <li>International Delegation Visits</li>
+                                <li>Investor Meets</li>
+                                <li>CSR Impact Showcases</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5"> <a href="#" class="explore-btn"> Explore All Services <i class="fa-solid fa-arrow-right"></i> </a> </div>
         </div>
-
-    </section> -->
-
-
-<section class="hero">
-
-    <video autoplay muted loop playsinline class="bg-video">
-        <source src="video.mp4" type="video/mp4">
-    </video>
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <span class="badge">Premium Event Management Services</span>
-
-        <h1>
-            Corporate Event <br>
-            Management in Bangalore
-        </h1>
-
-        <p>
-            Transform your business gatherings into extraordinary experiences.
-        </p>
-
-        <div class="hero-btns">
-            <a href="#" class="btn-primary">Get Started Today</a>
-            <a href="#" class="btn-secondary">View Portfolio</a>
-        </div>
-    </div>
-
-</section>
-
-    <!-- EVERY EVENT IS A MASTERPIECE -->
-
-<section class="masterpiece-section">
-
-    <div class="container">
-
-        <div class="section-header text-center">
-
-            <h2>
-                Every Event Is A
-                <span>Masterpiece</span>
-            </h2>
-
-            <p>
-                With over a decade of experience in Bangalore's corporate
-                event space, we transform gatherings into landmark experiences.
-            </p>
-
-        </div>
-
-        <div class="row g-4">
-
-            <!-- Card 1 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="master-card">
-
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200">
-
-                    <div class="card-content">
-
-                        <h4>Business Events</h4>
-
-                        <p>
-                            As business event management we are specialized in crafting extraordinary business conferences that inspire, educate, and propel organizations to new heights.                        </p>
-
-                        <ul>
-                            <li>Conferences</li>
-                            <li>All Hands</li>
-                            <li>Annual Kick Offs</li>
-                            <li>Summits</li>
-                            <li>Leadership Meets</li>
-                            <li>Hybrid Events</li>
-                            <li>Launches – Product, Brand, Facility</li>
-                            <li>Dealer Meets</li>
-                            <li>Customer Meets</li>
-                            <li>Investor Meets  </li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card 2 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="master-card">
-
-                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200">
-
-                    <div class="card-content">
-
-                        <h4>Celebration Galore</h4>
-
-                        <p>
-                            Celebrate your success with style and distinction. At White Massif Corporate event management, we understand that corporate celebrations go beyond just marking a date on the calendar.                        </p>
-
-                        <ul>
-                            <li>Annual Day</li>
-                            <li>Theme Celebrations</li>
-                            <li>Employee Engagement</li>
-                            <li>Awards & Recognition</li>
-                            <li>Team Offsites</li>
-                            <li>Product Launches</li>
-                            <li>Gala Nights</li>
-                            <li>Family Days</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card 3 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="master-card">
-
-                    <img src="https://images.unsplash.com/photo-1560523159-4a9692d222ef?q=80&w=1200">
-
-                    <div class="card-content">
-
-                        <h4>Inauguration</h4>
-
-                        <p>
-                            We specialize in end-to-end execution of inaugurations tailored to your brand identity.From thematic décor and entry arch setups to floral arrangements and ribbon-cutting stations, we cover it all.
-                        </p>
-
-                        <ul>
-                            <li>Office Launches</li>
-                            <li>Facility Tours</li>
-                            <li>CEO / Leadership Addresses</li>
-                            <li>Media & Press Briefings</li>
-                            <li>Brand Showcases</li>
-                            <li>Customized Stage & Tech Setups</li>
-                            <li>VIP Guests</li>
-                            <li>Live Streaming</li>
-                            <li>Cultural & Entertainment Segments</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card 4 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="master-card">
-
-                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200">
-
-                    <div class="card-content">
-
-                        <h4>
-                            Industry Convention, Customer & Dealers Meet
-                        </h4>
-
-                        <p>
-                        In an ever-evolving business landscape staying at the forefront of innovation, collaboration, and knowledge exchange is paramount.         
-                        </p>
-
-                        <ul>
-                            <li>Industry Conventions</li>
-                            <li>Dealer Meets</li>
-                            <li>Customer Connect Programs</li>
-                            <li>Product Launches</li>
-                            <li>Dealer & Distributor Meets</li>
-                            <li>Networking Events</li>
-                            <li>Partner Appreciation Events</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card 5 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="master-card">
-
-                    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?q=80&w=1200">
-
-                    <div class="card-content">
-
-                        <h4>Hybrid Events</h4>
-
-                        <p>
-                            Tailor made services to seamlessly execute hybrid events, combining the best of in person and virtual components for a dynamic and engaging experience.
-                        </p>
-
-                        <ul>
-                            <li>Townhalls</li>
-                            <li>Virtual + In-Person Summits</li>
-                            <li>Online Product Launches</li>
-                            <li>Hybrid Conferences & Panels</li>
-                            <li>Remote Team Engagement</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card 6 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="master-card">
-
-                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1200">
-
-                    <div class="card-content">
-
-                        <h4>Special Projects</h4>
-                        <p>
-                            In a world where one-size-fits-all doesn't suffice, We design tailor-made experiences, where every detail is meticulously crafted to align with the unique vision, preferences, and objectives of our clients.
-                        </p>
-
-                        <ul>
-                            <li>Government & Public Sector Events</li>
-                            <li>International Delegation  Visits</li>
-                            <li>Investor Meets</li>
-                            <li>CSR  Impact Showcases</li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="text-center mt-5">
-
-            <a href="#"
-               class="explore-btn">
-
-                Explore All Services
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-    <!-- ABOUT -->
-
+    </section> <!-- ABOUT -->
     <section class="about-section">
-
         <div class="container">
-
             <div class="row align-items-center">
-
-                <div class="col-lg-6"
-                    data-aos="fade-right">
-
-                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1400"
-                        class="img-fluid rounded-5 shadow">
-
-                </div>
-
-                <div class="col-lg-6"
-                    data-aos="fade-left">
-
-                    <span class="section-tag">
-
-                        Corporate Event Solutions
-
-                    </span>
-
-                    <h2>
-
-                        End-To-End Corporate
-                        Event Solutions
-                        That Drive Impact
-
-                    </h2>
-
-                    <p>
-
-                        We specialize in crafting
-                        impactful corporate experiences
-                        that inspire teams, strengthen
-                        brands, and achieve measurable
-                        business outcomes.
-
-                    </p>
-
-                    <p>
-
-                        From strategic planning and
-                        venue sourcing to flawless
-                        execution and post-event
-                        reporting, we manage every
-                        aspect of your corporate events.
-
-                    </p>
-
-                    <div class="features" >
-
-                        <div class="feature-box">
-
-                            ✓ Strategic Architecture
-
-                        </div>
-
-                        <div class="feature-box">
-
-                            ✓ Event Production
-
-                        </div>
-
-                        <div class="feature-box">
-
-                            ✓ Guest Management
-
-                        </div>
-
-                        <div class="feature-box">
-
-                            ✓ Brand Amplification
-
-                        </div>
-
+                <div class="col-lg-6" data-aos="fade-right"> <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1400" class="img-fluid rounded-5 shadow"> </div>
+                <div class="col-lg-6" data-aos="fade-left"> <span class="section-tag"> Corporate Event Solutions </span>
+                    <h2> End-To-End Corporate Event Solutions That Drive Impact </h2>
+                    <p> We specialize in crafting impactful corporate experiences that inspire teams, strengthen brands, and achieve measurable business outcomes. </p>
+                    <p> From strategic planning and venue sourcing to flawless execution and post-event reporting, we manage every aspect of your corporate events. </p>
+                    <div class="features">
+                        <div class="feature-box"> âœ“ Strategic Architecture </div>
+                        <div class="feature-box"> âœ“ Event Production </div>
+                        <div class="feature-box"> âœ“ Guest Management </div>
+                        <div class="feature-box"> âœ“ Brand Amplification </div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
-    </section>
-
-
-
-    <!-- SERVICES SECTION -->
-
-<section class="services-section">
-
-    <div class="container">
-
-        <div class="section-heading text-center">
-
-            <span class="section-badge">
-                Our Expertise
-            </span>
-
-            <h2>
-                Corporate Event
-                Management Services
-            </h2>
-
-            <p>
-                Comprehensive event solutions designed to
-                elevate your corporate presence and create
-                memorable experiences.
-            </p>
-
-        </div>
-
-        <div class="row g-4 mt-4">
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="service-card"
-                    data-aos="fade-up"
-                    data-aos-delay="100">
-
-                    <div class="icon-box">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-
-                    <h4>
-                        Business Conferences
-                    </h4>
-
-                    <p>
-                        Professional conferences,
-                        networking events and knowledge
-                        sharing experiences.
-                    </p>
-
-                </div>
-
+    </section> <!-- SERVICES SECTION -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-heading text-center"> <span class="section-badge"> Our Expertise </span>
+                <h2> Corporate Event Management Services </h2>
+                <p> Comprehensive event solutions designed to elevate your corporate presence and create memorable experiences. </p>
             </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="service-card"
-                    data-aos="fade-up"
-                    data-aos-delay="200">
-
-                    <div class="icon-box">
-                        <i class="fa-solid fa-microphone"></i>
-                    </div>
-
-                    <h4>
-                        Corporate Summits
-                    </h4>
-
-                    <p>
-                        High-impact leadership summits
-                        and executive gatherings.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="service-card"
-                    data-aos="fade-up"
-                    data-aos-delay="300">
-
-                    <div class="icon-box">
-                        <i class="fa-solid fa-rocket"></i>
-                    </div>
-
-                    <h4>
-                        Product Launches
-                    </h4>
-
-                    <p>
-                        Launch events that maximize
-                        visibility and engagement.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="service-card"
-                    data-aos="fade-up"
-                    data-aos-delay="400">
-
-                    <div class="icon-box">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-
-                    <h4>
-                        Annual Meetings
-                    </h4>
-
-                    <p>
-                        Strategic meetings designed to
-                        align teams and stakeholders.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="service-card"
-                    data-aos="fade-up"
-                    data-aos-delay="500">
-
-                    <div class="icon-box">
-                        <i class="fa-solid fa-handshake"></i>
-                    </div>
-
-                    <h4>
-                        Investor Forums
-                    </h4>
-
-                    <p>
-                        Professional investor relations
-                        and stakeholder engagement events.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="service-card"
-                    data-aos="fade-up"
-                    data-aos-delay="600">
-
-                    <div class="icon-box">
-                        <i class="fa-solid fa-building"></i>
-                    </div>
-
-                    <h4>
-                        All Hands Meetings
-                    </h4>
-
-                    <p>
-                        Organization-wide gatherings
-                        that inspire collaboration.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- WHY CHOOSE US -->
-
-<section class="why-choose-section">
-
-    <div class="container">
-
-        <div class="row align-items-center">
-
-            <!-- LEFT -->
-
-            <div class="col-lg-6">
-
-                <span class="why-badge">
-
-                    Why Choose Us
-
-                </span>
-
-                <h2>
-
-                    Corporate Events
-                    That Deliver
-                    Measurable Results
-
-                </h2>
-
-                <p>
-
-                    We combine strategy, creativity,
-                    and flawless execution to deliver
-                    corporate events that engage
-                    audiences and support business goals.
-
-                </p>
-
-                <ul class="why-list">
-
-                    <li>
-                        <i class="fa-solid fa-check"></i>
-                        End-to-End Event Management
-                    </li>
-
-                    <li>
-                        <i class="fa-solid fa-check"></i>
-                        Experienced Event Specialists
-                    </li>
-
-                    <li>
-                        <i class="fa-solid fa-check"></i>
-                        Technology Driven Experiences
-                    </li>
-
-                    <li>
-                        <i class="fa-solid fa-check"></i>
-                        Customized Event Strategies
-                    </li>
-
-                    <li>
-                        <i class="fa-solid fa-check"></i>
-                        ROI Focused Planning
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- RIGHT -->
-
-            <div class="col-lg-6">
-
-                <div class="stats-grid">
-
-                    <div class="stat-card">
-
-                        <h3 class="counter" data-target="535">0</h3>
-
-                        <p>
-                            Events Delivered
-                        </p>
-
-                    </div>
-
-                    <div class="stat-card">
-
-                        <h3 class="counter" data-target="176">0</h3>
-
-                        <p>
-                            Corporate Clients
-                        </p>
-
-                    </div>
-
-                    <div class="stat-card">
-
-                        <h3 class="counter" data-target="7">0</h3>
-
-                        <p>
-                            Years Experience
-                        </p>
-
-                    </div>
-
-                    <div class="stat-card">
-
-                        <h3 class="counter" data-target="198">0</h3>
-
-                        <p>
-                            Client Satisfaction
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PROCESS SECTION -->
-
-<section class="process-section">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-
-            <span class="process-badge">
-
-                Our Methodology
-
-            </span>
-
-            <h2 class="process-title">
-
-                A Proven Process
-                For Exceptional Events
-
-            </h2>
-
-            <p class="process-desc">
-
-                Every event follows a structured workflow
-                ensuring flawless execution and measurable
-                business outcomes.
-
-            </p>
-
-        </div>
-
-        <div class="process-wrapper">
-
-            <!-- STEP 1 -->
-
-            <div class="process-card"
-                 data-aos="fade-up">
-
-                <div class="step-number">
-                    01
-                </div>
-
-                <h4>
-                    Discover
-                </h4>
-
-                <p>
-
-                    Understanding your goals,
-                    audience, expectations,
-                    budget and business objectives.
-
-                </p>
-
-            </div>
-
-            <!-- STEP 2 -->
-
-            <div class="process-card"
-                 data-aos="fade-up"
-                 data-aos-delay="150">
-
-                <div class="step-number">
-                    02
-                </div>
-
-                <h4>
-                    Plan
-                </h4>
-
-                <p>
-
-                    Strategic event planning,
-                    venue sourcing, logistics,
-                    vendors and experience design.
-
-                </p>
-
-            </div>
-
-            <!-- STEP 3 -->
-
-            <div class="process-card"
-                 data-aos="fade-up"
-                 data-aos-delay="300">
-
-                <div class="step-number">
-                    03
-                </div>
-
-                <h4>
-                    Execute
-                </h4>
-
-                <p>
-
-                    Seamless execution with
-                    dedicated event managers
-                    and real-time coordination.
-
-                </p>
-
-            </div>
-
-            <!-- STEP 4 -->
-
-            <div class="process-card"
-                 data-aos="fade-up"
-                 data-aos-delay="450">
-
-                <div class="step-number">
-                    04
-                </div>
-
-                <h4>
-                    Measure
-                </h4>
-
-                <p>
-
-                    Post-event reporting,
-                    engagement analysis,
-                    ROI tracking and insights.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- INDUSTRIES SECTION -->
-
-<section class="industries-section">
-
-    <div class="container">
-
-        <div class="text-center">
-
-            <span class="industry-badge">
-                Industries We Serve
-            </span>
-
-            <h2 class="industry-title">
-
-                Expertise Across
-                Diverse Industries
-
-            </h2>
-
-            <p class="industry-desc">
-
-                We create impactful corporate events
-                tailored to the unique needs of
-                different industries and organizations.
-
-            </p>
-
-        </div>
-
-        <div class="row g-4 mt-5">
-
-            <!-- CARD 1 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="industry-card"
-                     data-aos="zoom-in">
-
-                    <div class="industry-icon">
-
-                        <i class="fa-solid fa-laptop-code"></i>
-
-                    </div>
-
-                    <h4>
-                        Technology
-                    </h4>
-
-                    <p>
-
-                        Product launches,
-                        conferences,
-                        hackathons and
-                        innovation summits.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD 2 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="industry-card"
-                     data-aos="zoom-in"
-                     data-aos-delay="100">
-
-                    <div class="industry-icon">
-
-                        <i class="fa-solid fa-building-columns"></i>
-
-                    </div>
-
-                    <h4>
-                        Banking & Finance
-                    </h4>
-
-                    <p>
-
-                        Investor meets,
-                        annual reports,
-                        stakeholder events.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD 3 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="industry-card"
-                     data-aos="zoom-in"
-                     data-aos-delay="200">
-
-                    <div class="industry-icon">
-
-                        <i class="fa-solid fa-stethoscope"></i>
-
-                    </div>
-
-                    <h4>
-                        Healthcare
-                    </h4>
-
-                    <p>
-
-                        Medical conferences,
-                        healthcare summits
-                        and workshops.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD 4 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="industry-card"
-                     data-aos="zoom-in"
-                     data-aos-delay="300">
-
-                    <div class="industry-icon">
-
-                        <i class="fa-solid fa-graduation-cap"></i>
-
-                    </div>
-
-                    <h4>
-                        Education
-                    </h4>
-
-                    <p>
-
-                        Academic events,
-                        convocations,
-                        seminars and forums.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD 5 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="industry-card"
-                     data-aos="zoom-in"
-                     data-aos-delay="400">
-
-                    <div class="industry-icon">
-
-                        <i class="fa-solid fa-industry"></i>
-
-                    </div>
-
-                    <h4>
-                        Manufacturing
-                    </h4>
-
-                    <p>
-
-                        Dealer meets,
-                        product showcases
-                        and trade events.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD 6 -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="industry-card"
-                     data-aos="zoom-in"
-                     data-aos-delay="500">
-
-                    <div class="industry-icon">
-
-                        <i class="fa-solid fa-cart-shopping"></i>
-
-                    </div>
-
-                    <h4>
-                        Retail & E-Commerce
-                    </h4>
-
-                    <p>
-
-                        Brand activations,
-                        launches and
-                        customer engagement.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- CTA SECTION -->
-
-<section class="cta-section">
-
-    <div class="container">
-
-        <div class="cta-box">
-
-            <span>Let's Create Something Extraordinary</span>
-
-            <h2>
-                Ready To Elevate Your
-                Corporate Events?
-            </h2>
-
-            <p>
-                Partner with us to create impactful,
-                engaging and memorable business events.
-            </p>
-
-            <a href="#"
-               class="cta-btn">
-
-                Get Started Today
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- Contact Us Section -->
-</section>
-
-    <section class="cta-contact-section">
-
-    <div class="container">
-
-        <div class="cta-wrapper">
-
-            <h2>
-                Need Professional Event
-                <span>Management?</span>
-            </h2>
-
-            <p class="cta-subtitle">
-                Get expert event planning services. From corporate conferences
-                to celebrations - we handle everything.
-            </p>
-
             <div class="row g-4 mt-4">
-
-                <!-- CARD 1 -->
-
-                <div class="col-lg-4">
-
-                    <div class="contact-card">
-
-                        <i class="fa-solid fa-phone contact-icon"></i>
-
-                        <h4>Contact Us Now</h4>
-
-                        <p>
-                            Get in touch with our event specialists
-                        </p>
-
-                        <a href="#" class="contact-btn">
-                            Get Quote
-                        </a>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon-box"> <i class="fa-solid fa-users"></i> </div>
+                        <h4> Business Conferences </h4>
+                        <p> Professional conferences, networking events and knowledge sharing experiences. </p>
                     </div>
-
                 </div>
-
-                <!-- CARD 2 -->
-
-                <div class="col-lg-4">
-
-                    <div class="contact-card">
-
-                        <i class="fa-regular fa-envelope contact-icon"></i>
-
-                        <h4>Email Us</h4>
-
-                        <p>
-                            Get detailed proposals and answers
-                        </p>
-
-                        <a href="mailto:chandan2004.n@gmail.com"
-                           class="contact-btn">
-
-                            info@dcl.com
-
-                        </a>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon-box"> <i class="fa-solid fa-microphone"></i> </div>
+                        <h4> Corporate Summits </h4>
+                        <p> High-impact leadership summits and executive gatherings. </p>
                     </div>
-
                 </div>
-
-                <!-- CARD 3 -->
-
-                <div class="col-lg-4">
-
-                    <div class="contact-card">
-
-                        <i class="fa-regular fa-calendar contact-icon"></i>
-
-                        <h4>Schedule a Meeting</h4>
-
-                        <p>
-                            Let's discuss your event requirements
-                        </p>
-
-                        <a href="#" class="contact-btn">
-                                <!-- add contact us page -->
-                            Book corporate entertainment
-
-                        </a>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon-box"> <i class="fa-solid fa-rocket"></i> </div>
+                        <h4> Product Launches </h4>
+                        <p> Launch events that maximize visibility and engagement. </p>
                     </div>
-
                 </div>
-
-            </div>
-
-            <div class="text-center mt-5">
-
-                <a href="#"
-                   class="main-cta-btn">
-
-                    Streamline Event Logistics
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="clients-section">
-
-    <div class="container">
-
-        <div class="text-center">
-
-            <span class="section-badge">
-                Trusted By
-            </span>
-            <br/>
-            <br/>
-
-            <h2>
-                <strong>We've Worked With</strong>
-            </h2>
-
-        </div>
-<div class="logos">
-        <div class="logo-slider">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
-
-<img src="../images/apple.png" alt="">
-
-<img src="../images/cap.png" alt="">
-
-<img src="../images/dell.png" alt="">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys">
-
-<img src="../images/deloitte.png" alt="">
-
-<img src="../images/hcl.png" alt="">
-
-<img src="../images/intel.png" alt="">
-
-<img src="../images/meta.png" alt="">
-
-<img src="../images/mphasis.png" alt="">
-
-<img src="../images/netflix.png" alt="">
-
-<img src="../images/oracle.png" alt="">
-
-<img src="../images/samsung.png" alt="">
-
-<img src="../images/techmahindra.png" alt="">
-
-<img src="../images/lt.png" alt="">
-
-
-
-        </div>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-4">
-
-                <h3 class="footer-logo">
-
-                DCL
-
-                </h3>
-
-                <p>
-
-                    Premium Event Management Company
-                    delivering exceptional corporate
-                    experiences across India.
-
-                </p>
-
-            </div>
-
-            <div class="col-lg-4">
-
-                <h4>
-
-                    Quick Links
-
-                </h4>
-
-                <ul class="footer-links">
-
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Clients</a></li>
-                    <li><a href="#">Contact</a></li>
-
-                </ul>
-
-            </div>
-
-            <div class="col-lg-4">
-
-                <h4>
-
-                    Contact
-
-                </h4>
-
-                <p>
-
-                    Bangalore, Karnataka
-
-                </p>
-
-                <p>
-
-                    info@dcl.com
-
-                </p>
-
-                <p>
-
-                    +91 6360475219
-
-                </p>
-
-                <div class="social-icons">
-
-                    <a href="#">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-
-                    <a href="https://wa.me/916360475219"
-                         class="whatsapp-btn">
-                         <i class="fab fa-whatsapp"></i>
-                    </a>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon-box"> <i class="fa-solid fa-chart-line"></i> </div>
+                        <h4> Annual Meetings </h4>
+                        <p> Strategic meetings designed to align teams and stakeholders. </p>
+                    </div>
                 </div>
-
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="icon-box"> <i class="fa-solid fa-handshake"></i> </div>
+                        <h4> Investor Forums </h4>
+                        <p> Professional investor relations and stakeholder engagement events. </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="icon-box"> <i class="fa-solid fa-building"></i> </div>
+                        <h4> All Hands Meetings </h4>
+                        <p> Organization-wide gatherings that inspire collaboration. </p>
+                    </div>
+                </div>
             </div>
-
         </div>
-
-        <hr>
-
-        <div class="copyright">
-
-            © 2026 DCL .
-            All Rights Reserved.
-
+    </section> <!-- WHY CHOOSE US -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="row align-items-center"> <!-- LEFT -->
+                <div class="col-lg-6"> <span class="why-badge"> Why Choose Us </span>
+                    <h2> Corporate Events That Deliver Measurable Results </h2>
+                    <p> We combine strategy, creativity, and flawless execution to deliver corporate events that engage audiences and support business goals. </p>
+                    <ul class="why-list">
+                        <li> <i class="fa-solid fa-check"></i> End-to-End Event Management </li>
+                        <li> <i class="fa-solid fa-check"></i> Experienced Event Specialists </li>
+                        <li> <i class="fa-solid fa-check"></i> Technology Driven Experiences </li>
+                        <li> <i class="fa-solid fa-check"></i> Customized Event Strategies </li>
+                        <li> <i class="fa-solid fa-check"></i> ROI Focused Planning </li>
+                    </ul>
+                </div> <!-- RIGHT -->
+                <div class="col-lg-6">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="535">0</h3>
+                            <p> Events Delivered </p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="176">0</h3>
+                            <p> Corporate Clients </p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="7">0</h3>
+                            <p> Years Experience </p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="198">0</h3>
+                            <p> Client Satisfaction </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-    </div>
-
-</footer>
-
+    </section> <!-- PROCESS SECTION -->
+    <section class="process-section">
+        <div class="container">
+            <div class="text-center mb-5"> <span class="process-badge"> Our Methodology </span>
+                <h2 class="process-title"> A Proven Process For Exceptional Events </h2>
+                <p class="process-desc"> Every event follows a structured workflow ensuring flawless execution and measurable business outcomes. </p>
+            </div>
+            <div class="process-wrapper"> <!-- STEP 1 -->
+                <div class="process-card" data-aos="fade-up">
+                    <div class="step-number"> 01 </div>
+                    <h4> Discover </h4>
+                    <p> Understanding your goals, audience, expectations, budget and business objectives. </p>
+                </div> <!-- STEP 2 -->
+                <div class="process-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="step-number"> 02 </div>
+                    <h4> Plan </h4>
+                    <p> Strategic event planning, venue sourcing, logistics, vendors and experience design. </p>
+                </div> <!-- STEP 3 -->
+                <div class="process-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number"> 03 </div>
+                    <h4> Execute </h4>
+                    <p> Seamless execution with dedicated event managers and real-time coordination. </p>
+                </div> <!-- STEP 4 -->
+                <div class="process-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="step-number"> 04 </div>
+                    <h4> Measure </h4>
+                    <p> Post-event reporting, engagement analysis, ROI tracking and insights. </p>
+                </div>
+            </div>
+        </div>
+    </section> <!-- INDUSTRIES SECTION -->
+    <section class="industries-section">
+        <div class="container">
+            <div class="text-center"> <span class="industry-badge"> Industries We Serve </span>
+                <h2 class="industry-title"> Expertise Across Diverse Industries </h2>
+                <p class="industry-desc"> We create impactful corporate events tailored to the unique needs of different industries and organizations. </p>
+            </div>
+            <div class="row g-4 mt-5"> <!-- CARD 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card" data-aos="zoom-in">
+                        <div class="industry-icon"> <i class="fa-solid fa-laptop-code"></i> </div>
+                        <h4> Technology </h4>
+                        <p> Product launches, conferences, hackathons and innovation summits. </p>
+                    </div>
+                </div> <!-- CARD 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="industry-icon"> <i class="fa-solid fa-building-columns"></i> </div>
+                        <h4> Banking & Finance </h4>
+                        <p> Investor meets, annual reports, stakeholder events. </p>
+                    </div>
+                </div> <!-- CARD 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="industry-icon"> <i class="fa-solid fa-stethoscope"></i> </div>
+                        <h4> Healthcare </h4>
+                        <p> Medical conferences, healthcare summits and workshops. </p>
+                    </div>
+                </div> <!-- CARD 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="industry-icon"> <i class="fa-solid fa-graduation-cap"></i> </div>
+                        <h4> Education </h4>
+                        <p> Academic events, convocations, seminars and forums. </p>
+                    </div>
+                </div> <!-- CARD 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="industry-icon"> <i class="fa-solid fa-industry"></i> </div>
+                        <h4> Manufacturing </h4>
+                        <p> Dealer meets, product showcases and trade events. </p>
+                    </div>
+                </div> <!-- CARD 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="industry-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="industry-icon"> <i class="fa-solid fa-cart-shopping"></i> </div>
+                        <h4> Retail & E-Commerce </h4>
+                        <p> Brand activations, launches and customer engagement. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box"> <span>Let's Create Something Extraordinary</span>
+                <h2> Ready To Elevate Your Corporate Events? </h2>
+                <p> Partner with us to create impactful, engaging and memorable business events. </p> <a href="#" class="cta-btn"> Get Started Today <i class="fa-solid fa-arrow-right"></i> </a>
+            </div>
+        </div>
+    </section> <!-- Contact Us Section --> </section>
+    <section class="cta-contact-section">
+        <div class="container">
+            <div class="cta-wrapper">
+                <h2> Need Professional Event <span>Management?</span> </h2>
+                <p class="cta-subtitle"> Get expert event planning services. From corporate conferences to celebrations - we handle everything. </p>
+                <div class="row g-4 mt-4"> <!-- CARD 1 -->
+                    <div class="col-lg-4">
+                        <div class="contact-card"> <i class="fa-solid fa-phone contact-icon"></i>
+                            <h4>Contact Us Now</h4>
+                            <p> Get in touch with our event specialists </p> <a href="#" class="contact-btn"> Get Quote </a>
+                        </div>
+                    </div> <!-- CARD 2 -->
+                    <div class="col-lg-4">
+                        <div class="contact-card"> <i class="fa-regular fa-envelope contact-icon"></i>
+                            <h4>Email Us</h4>
+                            <p> Get detailed proposals and answers </p> <a href="mailto:chandan2004.n@gmail.com" class="contact-btn"> info@dcl.com </a>
+                        </div>
+                    </div> <!-- CARD 3 -->
+                    <div class="col-lg-4">
+                        <div class="contact-card"> <i class="fa-regular fa-calendar contact-icon"></i>
+                            <h4>Schedule a Meeting</h4>
+                            <p> Let's discuss your event requirements </p> <a href="#" class="contact-btn"> <!-- add contact us page --> Book corporate entertainment </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5"> <a href="#" class="main-cta-btn"> Streamline Event Logistics <i class="fa-solid fa-arrow-right"></i> </a> </div>
+            </div>
+        </div>
+    </section>
+    <section class="clients-section">
+        <div class="container">
+            <div class="text-center"> <span class="section-badge"> Trusted By </span> <br /> <br />
+                <h2> <strong>We've Worked With</strong> </h2>
+            </div>
+            <div class="logos">
+                <div class="logo-slider"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"> <img src="../images/apple.png" alt=""> <img src="../images/cap.png" alt=""> <img src="../images/dell.png" alt=""> <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys"> <img src="../images/deloitte.png" alt=""> <img src="../images/hcl.png" alt=""> <img src="../images/intel.png" alt=""> <img src="../images/meta.png" alt=""> <img src="../images/mphasis.png" alt=""> <img src="../images/netflix.png" alt=""> <img src="../images/oracle.png" alt=""> <img src="../images/samsung.png" alt=""> <img src="../images/techmahindra.png" alt=""> <img src="../images/lt.png" alt=""> </div>
+            </div>
+        </div>
+    </section> <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h3 class="footer-logo"> DCL </h3>
+                    <p> Premium Event Management Company delivering exceptional corporate experiences across India. </p>
+                </div>
+                <div class="col-lg-4">
+                    <h4> Quick Links </h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4> Contact </h4>
+                    <p> Bangalore, Karnataka </p>
+                    <p> info@dcl.com </p>
+                    <p> +91 6360475219 </p>
+                    <div class="social-icons"> <a href="#"> <i class="fab fa-facebook-f"></i> </a> <a href="#"> <i class="fab fa-instagram"></i> </a> <a href="#"> <i class="fab fa-linkedin-in"></i> </a> <a href="#"> <i class="fab fa-youtube"></i> </a> <a href="https://wa.me/916360475219" class="whatsapp-btn"> <i class="fab fa-whatsapp"></i> </a> </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright"> Â© 2026 DCL . All Rights Reserved. </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
     <script src="../js/business-events.js"></script>
-
 </body>
 
 </html>
