@@ -1,12 +1,9 @@
-// ── Scroll Progress Bar ──────────────────────────────────────
 window.addEventListener("scroll", () => {
     let scrollTop    = document.documentElement.scrollTop;
     let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let progress     = (scrollTop / scrollHeight) * 100;
     document.getElementById("progress").style.width = progress + "%";
 });
-
-// ── Navbar Shadow on Scroll ──────────────────────────────────
 window.addEventListener("scroll", () => {
     const navbar = document.querySelector(".custom-navbar");
     if (window.scrollY > 50) {
@@ -15,8 +12,6 @@ window.addEventListener("scroll", () => {
         navbar.style.boxShadow = "none";
     }
 });
-
-// ── View Details Toggle (BUG FIX: was "butons" → "buttons") ─
 const buttons = document.querySelectorAll(".details-btn");
 buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -35,8 +30,6 @@ buttons.forEach(button => {
         }
     });
 });
-
-// ── Counter Animation ────────────────────────────────────────
 function animateCounter(el) {
     const target   = parseInt(el.getAttribute("data-target"));
     const duration = 2000;
@@ -51,7 +44,6 @@ function animateCounter(el) {
         el.textContent = Math.floor(current);
     }, 16);
 }
-
 const statsSection = document.querySelector(".stats-section");
 if (statsSection) {
     const observer = new IntersectionObserver((entries) => {
@@ -64,8 +56,6 @@ if (statsSection) {
     }, { threshold: 0.3 });
     observer.observe(statsSection);
 }
-
-// ── Contact Form Submit ──────────────────────────────────────
 const submitBtn = document.querySelector(".submit-btn");
 if (submitBtn) {
     submitBtn.addEventListener("click", () => {
@@ -89,8 +79,6 @@ if (submitBtn) {
         }
     });
 }
-
-// ── Team Member Modal (BUG FIX: removed DOMContentLoaded wrapper) ──
 const members = {
     hari: {
         img: "hari.jpeg",
@@ -167,16 +155,13 @@ const members = {
         email:     "chandan2004.n@gmail.com"
     }
 };
-
 const modal    = document.getElementById("memberModal");
 const cards    = document.querySelectorAll(".team-card");
 const closeBtn = document.querySelector(".close-modal");
-
 cards.forEach(card => {
     card.addEventListener("click", () => {
         const member = members[card.dataset.member];
         if (!member) return;
-
         document.getElementById("modalImg").src               = member.img;
         document.getElementById("modalName").textContent      = member.name;
         document.getElementById("modalRole").textContent      = member.role;
@@ -190,17 +175,14 @@ cards.forEach(card => {
         document.getElementById("modalGithub").href    = member.github;
         document.getElementById("modalInstagram").href = member.instagram;
         document.getElementById("modalEmail").href     = `mailto:${member.email}`;
-
         modal.classList.add("active");
         document.body.style.overflow = "hidden";
     });
 });
-
 closeBtn.addEventListener("click", () => {
     modal.classList.remove("active");
     document.body.style.overflow = "auto";
 });
-
 modal.addEventListener("click", (e) => {
     if (e.target === modal) {
         modal.classList.remove("active");
