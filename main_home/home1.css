@@ -583,7 +583,7 @@ body {
     transition: .5s;
 }
 .team-card:hover::before { transform: scaleX(1); }
-.member-modal{
+/* .member-modal{
     position: fixed;
     inset: 0;
     display: none;
@@ -662,6 +662,170 @@ body {
 }
 .member-modal-content::-webkit-scrollbar{
     display:none;
+} */
+ /* =========================
+   TEAM MEMBER MODAL
+========================= */
+
+.member-modal{
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    background: rgba(0,0,0,0.25);
+
+    z-index: 9999;
+
+    padding: 20px;
+}
+
+.member-modal.active{
+    display: flex;
+}
+
+.member-modal-content{
+    width: 500px;
+    max-width: 95%;
+    max-height: 80vh;
+
+    background: #fff;
+    color: #222;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+    position: relative;
+
+    overflow-y: auto;
+
+    animation: popup .3s ease;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+@keyframes popup{
+    from{
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.member-modal-content img{
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 4px solid #f4b400;
+
+    margin-bottom: 15px;
+}
+
+.member-modal-content h3{
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.member-modal-content h5{
+    color: #f4b400;
+    margin-bottom: 15px;
+}
+
+.member-modal-content p{
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.close-modal{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.close-modal:hover{
+    color: #f4b400;
+    transform: rotate(90deg);
+}
+
+/* Achievements List */
+
+#modalAchievements{
+    text-align: left;
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+#modalAchievements li{
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Social Icons */
+
+.modal-social{
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.modal-social a{
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #f4f4f4;
+    color: #333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.modal-social a:hover{
+    background: #f4b400;
+    color: #000;
+
+    transform: translateY(-4px);
+}
+
+/* Hide Scrollbar but Keep Scroll */
+
+.member-modal-content{
+    scrollbar-width: none;
+}
+
+.member-modal-content::-webkit-scrollbar{
+    display: none;
+    width:4px;
 }
 .clients-section {
     background: #f8f9fa;
