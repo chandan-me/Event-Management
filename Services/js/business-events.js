@@ -135,3 +135,4 @@ new IntersectionObserver((entries)=>{
 if(whySection){
     whyObserver.observe(whySection);
 }
+
