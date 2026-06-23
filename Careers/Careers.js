@@ -130,7 +130,7 @@
       title: "Client Servicing Manager",
       experience: "3–6 Years",
       location: "Hyderabad",
-      salary: "$60K–$85K",
+      salary: "₹60K–₹85K",
       description: "Lead client communication, oversee project timelines, and deliver premium experiences with high precision."
     },
     {
@@ -138,7 +138,7 @@
       title: "Event Production Executive",
       experience: "2–4 Years",
       location: "Bengaluru",
-      salary: "$45K–$65K",
+      salary: "₹45K–₹65K",
       description: "Coordinate production details, vendors, and on-ground execution to ensure flawless event outcomes."
     },
     {
@@ -146,7 +146,7 @@
       title: "Motion Graphic Designer",
       experience: "1–3 Years",
       location: "Remote (India)",
-      salary: "$35K–$55K",
+      salary: "₹35K–₹55K",
       description: "Create polished motion visuals for campaigns—clean timing, premium transitions, and brand consistency."
     },
     {
@@ -154,7 +154,7 @@
       title: "Business Development Executive",
       experience: "2–5 Years",
       location: "Delhi NCR",
-      salary: "$50K–$80K",
+      salary: "₹50K–₹80K",
       description: "Drive client acquisition through strategic outreach, relationship-building, and measurable pipeline growth."
     },
     {
@@ -162,7 +162,7 @@
       title: "Creative Strategist",
       experience: "4–7 Years",
       location: "Mumbai",
-      salary: "$70K–$105K",
+      salary: "₹70K–₹105K",
       description: "Own creative direction, align messaging, and craft strategy that turns ideas into standout experiences."
     },
     {
@@ -170,7 +170,7 @@
       title: "Event Coordinator",
       experience: "1–3 Years",
       location: "Chennai",
-      salary: "$30K–$50K",
+      salary: "₹30K–₹50K",
       description: "Support planning and execution—keep schedules tight and details correct from start to finish."
     }
   ];
@@ -495,4 +495,3 @@
 
   document.addEventListener("DOMContentLoaded", boot);
 })();
-

@@ -280,3 +280,38 @@ if(heroVideo){
 
 }
 
+// Dropdown
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+const serviceBtn =
+document.querySelector(".service-btn");
+
+const dropdown =
+document.querySelector(".service-dropdown");
+
+if(!serviceBtn || !dropdown) return;
+
+serviceBtn.addEventListener("click",(e)=>{
+
+e.preventDefault();
+
+dropdown.classList.toggle("show");
+
+});
+
+document.addEventListener("click",(e)=>{
+
+if(
+!serviceBtn.contains(e.target)
+&&
+!dropdown.contains(e.target)
+){
+
+dropdown.classList.remove("show");
+
+}
+
+});
+
+});

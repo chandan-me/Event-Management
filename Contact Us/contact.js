@@ -214,7 +214,7 @@ function calculateBudget() {
     document.getElementById("eventScale")
         .innerText = scale + "%";
 
-    // Recommendation
+    // Recommendation based on guest count  
 
     let recommendation = "";
 
@@ -347,3 +347,15 @@ navbar.style.background =
 }
 
 });
+
+// on click button
+function submitForm() {
+
+    Swal.fire({
+        icon: "success",
+        title: "Request Submitted!",
+        text: "Thank you for contacting BLVK MOON EVENT. Our team will reach out to you shortly.",
+        confirmButtonColor: "#d4a017"
+    });
+
+}
