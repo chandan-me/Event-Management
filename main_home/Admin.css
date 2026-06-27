@@ -1,0 +1,988 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+
+    --primary:#FFC107;
+    --primary-dark:#e6ac00;
+
+    --dark:#1F2D86;
+
+    --bg:#f5f7fb;
+
+    --white:#ffffff;
+
+    --shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+body{
+
+    background:var(--bg);
+
+    color:#333;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.admin-header{
+
+    background:linear-gradient(135deg,#1F2D86,#3247c8);
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.admin-header h1{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.admin-header p{
+
+    font-size:18px;
+
+    opacity:.9;
+
+}
+
+
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+.dashboard{
+
+    width:90%;
+
+    margin:40px auto;
+
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-card h2{
+
+    color:var(--dark);
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+
+
+/* ==========================
+   SEARCH
+========================== */
+
+.review-controls{
+
+    width:90%;
+
+    margin:40px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.review-controls input{
+
+    flex:1;
+
+    padding:15px 18px;
+
+    border:none;
+
+    border-radius:12px;
+
+    outline:none;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    font-size:16px;
+
+}
+
+.review-controls select{
+
+    width:220px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    padding:15px;
+
+    font-size:16px;
+
+}
+
+
+
+/* ==========================
+   REVIEW GRID
+========================== */
+
+.review-list{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:25px;
+
+    padding-bottom:60px;
+
+}
+
+
+
+/* ==========================
+   REVIEW CARD
+========================== */
+
+.review-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+    transition:.4s;
+
+    position:relative;
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.review-card h3{
+
+    color:var(--dark);
+
+    margin-bottom:5px;
+
+}
+
+.review-card span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+.review-card .stars{
+
+    margin:15px 0;
+
+    color:var(--primary);
+
+    font-size:20px;
+
+}
+
+.review-card p{
+
+    line-height:1.7;
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.review-buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+}
+
+.review-buttons button{
+
+    flex:1;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.edit-btn{
+
+    background:#1F2D86;
+
+    color:white;
+
+}
+
+.edit-btn:hover{
+
+    background:#172067;
+
+}
+
+.delete-btn{
+
+    background:#e53935;
+
+    color:white;
+
+}
+
+.delete-btn:hover{
+
+    background:#c62828;
+
+}
+
+
+
+/* ==========================
+   MODAL
+========================== */
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    backdrop-filter:blur(6px);
+
+    z-index:9999;
+
+}
+
+.modal.active{
+
+    display:flex;
+
+}
+
+.modal-content{
+
+    width:500px;
+
+    max-width:95%;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    position:relative;
+
+    animation:popup .3s ease;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:scale(.7);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+.close{
+
+    position:absolute;
+
+    right:20px;
+
+    top:15px;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+.modal-content h2{
+
+    color:var(--dark);
+
+    margin-bottom:25px;
+
+}
+
+.modal-content label{
+
+    display:block;
+
+    margin:15px 0 8px;
+
+    font-weight:600;
+
+}
+
+.modal-content input,
+
+.modal-content textarea,
+
+.modal-content select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+.modal-content textarea{
+
+    resize:none;
+
+}
+
+#saveReview{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    background:var(--primary);
+
+    color:black;
+
+    border:none;
+
+    font-weight:700;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#saveReview:hover{
+
+    background:var(--primary-dark);
+
+}
+
+
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.review-controls{
+
+flex-direction:column;
+
+}
+
+.review-controls input{
+
+width:100%;
+
+}
+
+.review-controls select{
+
+width:100%;
+
+}
+
+.admin-header h1{
+
+font-size:30px;
+
+}
+
+}
+
+
+
+@media(max-width:480px){
+
+.review-list{
+
+grid-template-columns:1fr;
+
+}
+
+.review-card{
+
+padding:20px;
+
+}
+
+.review-buttons{
+
+flex-direction:column;
+
+}
+
+.modal-content{
+
+padding:20px;
+
+}
+
+}
+/* ===========================================
+   BOOKING MANAGEMENT
+=========================================== */
+
+.booking-dashboard{
+
+    width:90%;
+
+    margin:40px auto;
+
+}
+
+.booking-controls{
+
+    width:90%;
+
+    margin:30px auto;
+
+}
+
+.booking-controls input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    box-shadow:var(--shadow);
+
+    font-size:16px;
+
+}
+
+.booking-list{
+
+    width:90%;
+
+    margin:40px auto 80px;
+
+}
+
+.booking-list h2{
+
+    color:var(--dark);
+
+    margin-bottom:30px;
+
+    font-size:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+#bookingContainer{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+    gap:25px;
+
+}
+
+/* ==============================
+   BOOKING CARD
+============================== */
+
+.booking-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+    transition:.35s;
+
+    border-left:6px solid var(--primary);
+
+}
+
+.booking-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.booking-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.booking-header h3{
+
+    color:var(--dark);
+
+    font-size:24px;
+
+}
+
+.booking-status{
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.pending{
+
+    background:#fff3cd;
+
+    color:#856404;
+
+}
+
+.approved{
+
+    background:#d4edda;
+
+    color:#155724;
+
+}
+
+.rejected{
+
+    background:#f8d7da;
+
+    color:#721c24;
+
+}
+
+/* ==============================
+   BOOKING DETAILS
+============================== */
+
+.booking-details{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+    margin-top:20px;
+
+}
+
+.booking-item{
+
+    background:#f8f9fc;
+
+    padding:12px;
+
+    border-radius:10px;
+
+}
+
+.booking-item strong{
+
+    display:block;
+
+    color:var(--dark);
+
+    margin-bottom:5px;
+
+    font-size:14px;
+
+}
+
+.booking-item span{
+
+    color:#555;
+
+    font-size:15px;
+
+    word-break:break-word;
+
+}
+
+/* ==============================
+   ACTION BUTTONS
+============================== */
+
+.booking-actions{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:25px;
+
+}
+
+.booking-actions button{
+
+    flex:1;
+
+    border:none;
+
+    padding:13px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.approve-btn{
+
+    background:#28a745;
+
+    color:white;
+
+}
+
+.approve-btn:hover{
+
+    background:#218838;
+
+}
+
+.reject-btn{
+
+    background:#dc3545;
+
+    color:white;
+
+}
+
+.reject-btn:hover{
+
+    background:#c82333;
+
+}
+
+/* ==============================
+   EMPTY BOOKINGS
+============================== */
+
+.empty-bookings{
+
+    grid-column:1/-1;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.empty-bookings i{
+
+    font-size:65px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.empty-bookings h3{
+
+    color:var(--dark);
+
+    margin-bottom:10px;
+
+}
+
+.empty-bookings p{
+
+    color:#777;
+
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media(max-width:900px){
+
+.booking-details{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#bookingContainer{
+
+grid-template-columns:1fr;
+
+}
+
+.booking-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:10px;
+
+}
+
+.booking-actions{
+
+flex-direction:column;
+
+}
+
+.booking-list h2{
+
+font-size:24px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.booking-card{
+
+padding:18px;
+
+}
+
+.booking-item{
+
+padding:10px;
+
+}
+
+.booking-actions button{
+
+font-size:14px;
+
+}
+
+}

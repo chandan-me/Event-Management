@@ -62,28 +62,230 @@ if (statsSection) {
     }, { threshold: 0.3 });
     observer.observe(statsSection);
 }
-const submitBtn = document.querySelector(".submit-btn");
-if (submitBtn) {
-    submitBtn.addEventListener("click", () => {
-        const inputs = document.querySelectorAll(".form-input");
-        let allFilled = true;
-        inputs.forEach(input => {
-            if (!input.value.trim()) {
-                allFilled = false;
-                input.style.borderColor = "#ff4444";
-                setTimeout(() => input.style.borderColor = "#eee", 2000);
-            }
-        });
-        if (allFilled) {
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            submitBtn.style.background = "#28a745";
-            setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-                submitBtn.style.background = "#ffc107";
-                inputs.forEach(input => input.value = "");
-            }, 3000);
+// const submitBtn = document.querySelector(".submit-btn");
+// if (submitBtn) {
+//     submitBtn.addEventListener("click", () => {
+//         const inputs = document.querySelectorAll(".form-input");
+//         let allFilled = true;
+//         inputs.forEach(input => {
+//             if (!input.value.trim()) {
+//                 allFilled = false;
+//                 input.style.borderColor = "#ff4444";
+//                 setTimeout(() => input.style.borderColor = "#eee", 2000);
+//             }
+//         });
+//         if (allFilled) {
+//             submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+//             submitBtn.style.background = "#28a745";
+//             setTimeout(() => {
+//                 submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+//                 submitBtn.style.background = "#ffc107";
+//                 inputs.forEach(input => input.value = "");
+//             }, 3000);
+//         }
+//     });
+// }
+// const stars = document.querySelectorAll(".star");
+// const ratingInput = document.getElementById("rating");
+
+// stars.forEach(star => {
+
+//     star.addEventListener("click", () => {
+
+//         let rating = star.dataset.value;
+
+//         ratingInput.value = rating;
+
+//         stars.forEach(s => {
+//             s.classList.remove("active");
+//         });
+
+//         for(let i=0;i<rating;i++){
+//             stars[i].classList.add("active");
+//         }
+
+//     });
+
+// });
+
+// const reviewForm = document.getElementById("reviewForm");
+// const reviewsContainer = document.getElementById("reviewsContainer");
+
+// reviewForm.addEventListener("submit",(e)=>{
+
+//     e.preventDefault();
+
+//     const name = document.getElementById("name").value;
+//     const location = document.getElementById("location").value;
+//     const message = document.getElementById("message").value;
+//     const rating = document.getElementById("rating").value;
+
+//     if(!rating){
+//         alert("Please select a rating");
+//         return;
+//     }
+
+//     let starsHTML = "";
+
+//     for(let i=0;i<rating;i++){
+//         starsHTML += "⭐";
+//     }
+
+//     const reviewCard = document.createElement("div");
+
+//     reviewCard.classList.add("review-card");
+
+//     reviewCard.innerHTML = `
+//         <h4>${name}</h4>
+//         <div class="review-location">${location}</div>
+//         <div class="review-stars">${starsHTML}</div>
+//         <p class="review-message">${message}</p>
+//     `;
+
+//     reviewsContainer.prepend(reviewCard);
+
+//     reviewForm.reset();
+
+//     stars.forEach(star=>{
+//         star.classList.remove("active");
+//     });
+
+// });
+let selectedRating = 0;
+
+const stars = document.querySelectorAll(".star");
+
+stars.forEach(star => {
+
+    star.addEventListener("click", () => {
+
+        selectedRating = star.dataset.value;
+
+        stars.forEach(s => s.classList.remove("active"));
+
+        for(let i=0;i<selectedRating;i++){
+            stars[i].classList.add("active");
         }
+
+        document.getElementById("rating").value = selectedRating;
+
     });
+
+});
+
+const reviewForm = document.getElementById("reviewForm");
+const reviewsContainer = document.getElementById("reviewsContainer");
+
+loadReviews();
+
+reviewForm.addEventListener("submit",(e)=>{
+
+    e.preventDefault();
+
+    const review = {
+
+    id: Date.now(),              // <-- ADD THIS
+
+    name: document.getElementById("name").value,
+
+    email: document.getElementById("email").value,
+
+    location: document.getElementById("location").value,
+
+    rating: Number(document.getElementById("rating").value),
+
+    message: document.getElementById("message").value,
+
+    date: new Date().toLocaleString()
+
+};
+
+    let reviews =
+        JSON.parse(localStorage.getItem("reviews")) || [];
+
+    reviews.unshift(review);
+
+    localStorage.setItem(
+        "reviews",
+        JSON.stringify(reviews)
+    );
+
+    displayReviews();
+
+    reviewForm.reset();
+
+    stars.forEach(star =>
+        star.classList.remove("active")
+    );
+
+});
+
+function loadReviews(){
+
+    displayReviews();
+
+}
+
+function displayReviews(){
+
+    const reviews =
+        JSON.parse(localStorage.getItem("reviews")) || [];
+
+    reviewsContainer.innerHTML = "";
+
+    reviews.forEach(review => {
+
+        let starsHTML = "";
+
+        for(let i=0;i<review.rating;i++){
+
+            starsHTML +=
+            '<i class="fas fa-star"></i>';
+
+        }
+
+        const card = document.createElement("div");
+
+        card.className =
+        "col-lg-4 col-md-6";
+
+        card.innerHTML = `
+
+        <div class="review-card">
+
+            <div class="review-stars">
+                ${starsHTML}
+            </div>
+            <div class="reviewer">
+
+                <img src="https://ui-avatars.com/api/?name=${encodeURIComponent(review.name)}&background=f4b400&color=000">
+
+                <div>
+
+                    <h5>${review.name}</h5>
+                    <p>${review.email}</p>
+
+                    <span class="review-location">
+                        ${review.location}
+                    </span>
+
+                </div>
+
+            </div>
+
+            <p class="review-text">
+                "${review.message}"
+            </p>
+
+
+        </div>
+
+        `;
+
+        reviewsContainer.appendChild(card);
+
+    });
+
 }
 const members = {
     hari: {
@@ -229,5 +431,15 @@ dropdown.classList.remove("show");
 }
 
 });
+
+});
+
+document.getElementById("reviewForm").addEventListener("submit", function(e) {
+
+    // e.preventDefault(); // Stops the form from submitting
+
+    alert("✅ Your review has been submitted successfully!\n\nThank you for your feedback.");
+
+    this.reset();
 
 });

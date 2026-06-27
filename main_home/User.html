@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Profile | BLVK MOON EVENT</title>
+
+    <link rel="stylesheet" href="User.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-moon"></i>
+
+            <h2>BLVK MOON EVENT</h2>
+
+        </div>
+
+        <button id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </header>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <section class="profile-section">
+
+        <div class="profile-card">
+
+            <div class="profile-image">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <h2 id="userName">Loading...</h2>
+
+            <p id="userEmail"></p>
+
+            <p id="userPhone"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKINGS ================= -->
+
+    <section class="booking-section">
+
+        <div class="heading">
+
+            <h1>My Bookings</h1>
+
+            <p>
+                All your event bookings will appear here.
+            </p>
+
+        </div>
+
+        <!-- Booking cards will be added here -->
+
+        <div id="bookingContainer">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKING CARD TEMPLATE ================= -->
+
+    <!--
+    booking.js will generate cards like this
+
+    <div class="booking-card">
+
+        <div class="booking-header">
+
+            <h2>Wedding</h2>
+
+            <span class="status pending">
+                Pending
+            </span>
+
+        </div>
+
+        <div class="booking-grid">
+
+            <div>
+
+                <strong>Booking ID</strong>
+
+                <p>BK123456</p>
+
+            </div>
+
+            <div>
+
+                <strong>Venue</strong>
+
+                <p>Bangalore Palace</p>
+
+            </div>
+
+            <div>
+
+                <strong>Location</strong>
+
+                <p>Bangalore</p>
+
+            </div>
+
+            <div>
+
+                <strong>Guests</strong>
+
+                <p>500</p>
+
+            </div>
+
+            <div>
+
+                <strong>Budget</strong>
+
+                <p>₹600000</p>
+
+            </div>
+
+            <div>
+
+                <strong>Event Date</strong>
+
+                <p>20-12-2026</p>
+
+            </div>
+
+            <div>
+
+                <strong>Booked On</strong>
+
+                <p>26-06-2026 08:15 PM</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    -->
+
+    <script src="User.js"></script>
+
+</body>
+
+</html>

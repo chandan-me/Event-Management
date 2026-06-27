@@ -582,10 +582,11 @@ body{
 
 }
 .nav-link {
-    color: white !important;
-    margin-left: 20px;
-    position: relative;
-    transition: .3s;
+    color:#fff !important;
+    padding:12px 14px !important;
+    margin-left:0;
+    white-space:nowrap;
+    transition:.3s;
 }
 .nav-icon { margin-right: 8px; font-size: .9rem; transition: .4s; }
 .nav-link:hover .nav-icon {
@@ -597,11 +598,11 @@ body{
     position: absolute;
     left: 0; bottom: -5px;
     width: 0; height: 2px;
-    background: var(--primary);
+    background: var(--gold);
     transition: .4s;
 }
 .nav-link:hover::after { width: 100%; }
-.nav-link:hover { color: var(--primary) !important; }
+.nav-link:hover { color: var(--gold) !important; }
 .hero { position: relative; height: 100vh; overflow: hidden; }
 .hero-video {
     position: absolute;

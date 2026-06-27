@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venues | BLVK MOON EVENT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="Venue.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════ HEADER ═══════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+     <div class="logo-wrap">
+  <img src="logo.png" alt="BLVK MOON Logo" class="logo-img" />
+  <span class="logo-text">BLVK MOON EVENT</span>
+</div>
+
+      <!-- Nav -->
+      <nav class="main-nav">
+        <a href="Home1.html" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+
+        <li class="nav-item service-menu">
+
+  <a class="nav-link service-btn">
+      <i class="fas fa-calendar-check nav-icon"></i>
+      Services
+  </a>
+
+  <div class="service-dropdown">
+
+    <a href="/Event-Management/Services/pages/business-events.html">Business Events</a>
+
+    <a href="/Event-Management/Services/pages/celebrations-galore.html">Celebrations Galore</a>
+
+    <a href="/Event-Management/Services/pages/launches.html">Launches</a>
+
+    <a href="/Event-Management/Services/pages/wedding-events.html">Wedding Events</a>
+
+    <a href="/Event-Management/Services/pages/industry-conventions.html">Industry Conventions</a>
+
+    <a href="/Event-Management/Services/pages/special-project.html">Special Projects</a>
+
+  </div>
+
+</li>
+        <a href="/Event-Management/Clients/Clients.html" class="nav-link"><i class="fas fa-star"></i><span>Clients</span></a>
+        <a href="/Event-Management/Careers/Careers.html" class="nav-link"><i class="fas fa-images"></i><span>Careers</span></a>
+        <a href="/Event-Management/Blog/Blog.html" class="nav-link"><i class="fas fa-users"></i><span>Blog</span></a>
+        <a href="Team.html" class="nav-link"><i class="fas fa-quote-left"></i><span>Team</span></a>
+        <a href="Venue.html" class="nav-link active"><i class="fas fa-location-dot"></i><span>Venue</span></a>
+        <a href="/Event-Management/Login-Signup/login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i><span>Sign In</span></a>
+        <a href="/Event-Management/Contact Us/contact.html" class="nav-contact"><i class="fas fa-phone"></i>Contact Us</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="venue-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Curated for Excellence</p>
+      <h1 class="hero-title">Find Your<br /><em>Perfect Venue</em></h1>
+      <div class="hero-rule"></div>
+      <p class="hero-sub">Luxury &nbsp;·&nbsp; Elegance &nbsp;·&nbsp; Prestige &nbsp;·&nbsp; Unforgettable</p>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FILTER SECTION ═══════════════════ -->
+  <section class="filter-section">
+    <div class="filter-header">
+      <h2 class="filter-title">Search Venues</h2>
+      <p class="filter-sub">Refine by location, event type, capacity & budget</p>
+    </div>
+    <div class="filter-inner">
+
+      <div class="filter-group">
+        <label class="filter-label"><i class="fas fa-map-marker-alt"></i> Location</label>
+        <div class="select-wrap">
+          <select id="searchVenue" class="filter-select">
+            <option value="all">All Locations</option>
+            <option>Bangalore</option>
+            <option>Mysore</option>
+            <option>Hyderabad</option>
+            <option>Chennai</option>
+            <option>Goa</option>
+            <option>Coorg</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Pune</option>
+          </select>
+          <i class="fas fa-chevron-down select-arrow"></i>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label"><i class="fas fa-glass-cheers"></i> Event Type</label>
+        <div class="select-wrap">
+          <select id="eventFilter" class="filter-select">
+            <option value="all">All Events</option>
+            <option>Wedding</option>
+            <option>Corporate</option>
+            <option>Birthday</option>
+            <option>Reception</option>
+            <option>Conference</option>
+          </select>
+          <i class="fas fa-chevron-down select-arrow"></i>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label"><i class="fas fa-users"></i> Capacity</label>
+        <div class="select-wrap">
+          <select id="capacityFilter" class="filter-select">
+            <option value="all">Any Capacity</option>
+            <option value="100">100+ Guests</option>
+            <option value="300">300+ Guests</option>
+            <option value="500">500+ Guests</option>
+            <option value="1000">1000+ Guests</option>
+          </select>
+          <i class="fas fa-chevron-down select-arrow"></i>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label"><i class="fas fa-rupee-sign"></i> Budget</label>
+        <div class="select-wrap">
+          <select id="priceFilter" class="filter-select">
+            <option value="all">Any Budget</option>
+            <option value="50000">Below ₹50,000</option>
+            <option value="100000">₹50k – ₹1L</option>
+            <option value="300000">₹1L – ₹3L</option>
+            <option value="1000000">Luxury ₹3L+</option>
+          </select>
+          <i class="fas fa-chevron-down select-arrow"></i>
+        </div>
+      </div>
+
+      <button class="filter-btn" id="resetFilters">
+        <i class="fas fa-rotate-left"></i> Reset
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ RESULTS META ═══════════════════ -->
+  <div class="results-meta">
+    <div class="results-inner">
+      <span id="venueCount" class="venue-count">20 Venues Found</span>
+      <div class="gold-rule"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ VENUE GRID ═══════════════════ -->
+  <section class="venue-section">
+    <div class="venue-container">
+      <div class="venue-grid" id="venueGrid">
+
+        <article class="venue-card" data-location="Bangalore" data-event="Wedding" data-capacity="1000" data-budget="500000">
+          <div class="card-image-wrap"><img src="https://bangaloretourism.in/images/sightseeing-tourism-places-to-visit/bangalore-palace/bangalore-palace-history-architecture-timings.jpg" alt="Bangalore Palace" /><span class="card-badge">Wedding</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Bangalore</div>
+            <h3 class="card-title">Bangalore Palace</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">1,000 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹5,00,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Bangalore" data-event="Corporate" data-capacity="600" data-budget="300000">
+          <div class="card-image-wrap"><img src="https://gos3.ibcdn.com/itc-gardenia-a-luxury-collection-hotel-bangalore-front-46532676451g.jpg" alt="ITC Gardenia" /><span class="card-badge">Corporate</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Bangalore</div>
+            <h3 class="card-title">ITC Gardenia</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">600 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹3,00,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Mysore" data-event="Birthday" data-capacity="350" data-budget="150000">
+          <div class="card-image-wrap"><img src="https://static.toiimg.com/photo/49949216/.jpg" alt="Radisson Blu Mysore" /><span class="card-badge">Birthday</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Mysore</div>
+            <h3 class="card-title">Radisson Blu Mysore</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">350 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹1,50,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Mangalore" data-event="Reception" data-capacity="500" data-budget="250000">
+          <div class="card-image-wrap"><img src="https://tse4.mm.bing.net/th/id/OIP.n8P-kWQhmqltHDJOlDD6iQHaIn?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Goldfinch Hotel" /><span class="card-badge">Reception</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Mangalore</div>
+            <h3 class="card-title">Goldfinch Hotel</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">500 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹2,50,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Goa" data-event="Beach Wedding" data-capacity="1200" data-budget="700000">
+          <div class="card-image-wrap"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/57/03/b2/taj-exotica-resort-spa.jpg?w=700&h=-1&s=1" alt="Taj Exotica" /><span class="card-badge">Beach Wedding</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Goa</div>
+            <h3 class="card-title">Taj Exotica</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">1,200 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹7,00,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Hyderabad" data-event="Conference" data-capacity="900" data-budget="400000">
+          <div class="card-image-wrap"><img src="https://tse1.mm.bing.net/th/id/OIP.mvikoW5R-koI1qlB6eXNlAHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Hyatt Hyderabad" /><span class="card-badge">Conference</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Hyderabad</div>
+            <h3 class="card-title">Hyatt Hyderabad</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">900 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹4,00,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+        <!-- Sea Breeze Resort -->
+<article class="venue-card" data-location="Goa" data-event="Birthday" data-capacity="180" data-budget="65000">
+  <div class="card-image-wrap">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.rV_AbJJIqaTncWiuVKMvOQAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=33" alt="Sea Breeze Resort" />
+    <span class="card-badge">Birthday</span>
+  </div>
+  <div class="card-body">
+    <div class="card-location"><i class="fas fa-map-marker-alt"></i> Goa</div>
+    <h3 class="card-title">Sea Breeze Resort</h3>
+    <div class="card-rule"></div>
+    <div class="card-meta">
+      <div class="meta-item">
+        <span class="meta-label">Capacity</span>
+        <span class="meta-value">180 Guests</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Starting From</span>
+        <span class="meta-value gold">₹65,000</span>
+      </div>
+    </div>
+    <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+  </div>
+</article>
+
+<!-- Palm Paradise Hall -->
+<article class="venue-card" data-location="Goa" data-event="Reception" data-capacity="250" data-budget="85000">
+  <div class="card-image-wrap">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.ebV872XTD_IFeFoH6iOnuAHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Palm Paradise Hall" />
+    <span class="card-badge">Reception</span>
+  </div>
+  <div class="card-body">
+    <div class="card-location"><i class="fas fa-map-marker-alt"></i> Goa</div>
+    <h3 class="card-title">Palm Paradise Hall</h3>
+    <div class="card-rule"></div>
+    <div class="card-meta">
+      <div class="meta-item">
+        <span class="meta-label">Capacity</span>
+        <span class="meta-value">250 Guests</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Starting From</span>
+        <span class="meta-value gold">₹85,000</span>
+      </div>
+    </div>
+    <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+  </div>
+</article>
+
+<!-- Ocean Pearl Gardens -->
+<article class="venue-card" data-location="Goa" data-event="Birthday" data-capacity="140" data-budget="55000">
+  <div class="card-image-wrap">
+    <img src="https://tse4.mm.bing.net/th/id/OIP.w8xaZQJrTESQsKmhM9ZphQHaFj?r=0&w=1280&h=960&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Ocean Pearl Gardens" />
+    <span class="card-badge">Birthday</span>
+  </div>
+  <div class="card-body">
+    <div class="card-location"><i class="fas fa-map-marker-alt"></i> Goa</div>
+    <h3 class="card-title">Ocean Pearl Gardens</h3>
+    <div class="card-rule"></div>
+    <div class="card-meta">
+      <div class="meta-item">
+        <span class="meta-label">Capacity</span>
+        <span class="meta-value">140 Guests</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Starting From</span>
+        <span class="meta-value gold">₹55,000</span>
+      </div>
+    </div>
+    <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+  </div>
+</article>
+
+<!-- Sunset Celebration Club -->
+<article class="venue-card" data-location="Goa" data-event="Reception" data-capacity="320" data-budget="95000">
+  <div class="card-image-wrap">
+    <img src="https://images.stockcake.com/public/8/4/4/844ea965-a184-47bf-af2f-fdfe74561eee_large/beach-sunset-party-stockcake.jpg" alt="Sunset Celebration Club" />
+    <span class="card-badge">Reception</span>
+  </div>
+  <div class="card-body">
+    <div class="card-location"><i class="fas fa-map-marker-alt"></i> Goa</div>
+    <h3 class="card-title">Sunset Celebration Club</h3>
+    <div class="card-rule"></div>
+    <div class="card-meta">
+      <div class="meta-item">
+        <span class="meta-label">Capacity</span>
+        <span class="meta-value">320 Guests</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Starting From</span>
+        <span class="meta-value gold">₹95,000</span>
+      </div>
+    </div>
+    <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+  </div>
+</article>
+
+<!-- Golden Sands Lawn -->
+<article class="venue-card" data-location="Goa" data-event="Birthday" data-capacity="220" data-budget="75000">
+  <div class="card-image-wrap">
+    <img src="https://r1imghtlak.ibcdn.com/6b408238-0213-40c9-be1e-a86fc92ffead.jpeg" alt="Golden Sands Lawn" />
+    <span class="card-badge">Birthday</span>
+  </div>
+  <div class="card-body">
+    <div class="card-location"><i class="fas fa-map-marker-alt"></i> Goa</div>
+    <h3 class="card-title">Golden Sands Lawn</h3>
+    <div class="card-rule"></div>
+    <div class="card-meta">
+      <div class="meta-item">
+        <span class="meta-label">Capacity</span>
+        <span class="meta-value">220 Guests</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Starting From</span>
+        <span class="meta-value gold">₹75,000</span>
+      </div>
+    </div>
+    <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+  </div>
+</article>
+
+        <article class="venue-card" data-location="Chennai" data-event="Product Launch" data-capacity="650" data-budget="350000">
+          <div class="card-image-wrap"><img src="https://tse1.mm.bing.net/th/id/OIP.q3tGVmnScSI0nPjplOR_JAHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="The Leela Palace" /><span class="card-badge">Product Launch</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Chennai</div>
+            <h3 class="card-title">The Leela Palace</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">650 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹3,50,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Mumbai" data-event="Award Ceremony" data-capacity="1500" data-budget="800000">
+          <div class="card-image-wrap"><img src="https://tse4.mm.bing.net/th/id/OIP.wobY2N9rJ3IWiYlOwKK12QHaED?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Taj Lands End" /><span class="card-badge">Award Ceremony</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Mumbai</div>
+            <h3 class="card-title">Taj Lands End</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">1,500 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹8,00,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Delhi" data-event="Business Meet" data-capacity="850" data-budget="450000">
+          <div class="card-image-wrap"><img src="https://www.romanticbug.com/wp-content/themes/rbug/thumbimg.php?src=wp-content/uploads/2015/10/ITC-Maurya.jpg&w=800&h=500" alt="ITC Maurya" /><span class="card-badge">Business Meet</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Delhi</div>
+            <h3 class="card-title">ITC Maurya</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">850 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹4,50,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Jaipur" data-event="Destination Wedding" data-capacity="2000" data-budget="900000">
+          <div class="card-image-wrap"><img src="https://tse4.mm.bing.net/th/id/OIP.Tm_1XAm5FDp7hO9h7FpIbQHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Rambagh Palace" /><span class="card-badge">Destination Wedding</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Jaipur</div>
+            <h3 class="card-title">Rambagh Palace</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">2,000 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹9,00,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Pune" data-event="Corporate" data-capacity="400" data-budget="200000">
+          <div class="card-image-wrap"><img src="https://tse1.mm.bing.net/th/id/OIP.cpbSbjEZie-2bGrITttFTwHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="JW Marriott Pune" /><span class="card-badge">Corporate</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Pune</div>
+            <h3 class="card-title">JW Marriott Pune</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">400 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹2,00,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Kochi" data-event="Wedding" data-capacity="700" data-budget="300000">
+          <div class="card-image-wrap"><img src="https://tse3.mm.bing.net/th/id/OIP.TujE-HRodXNOq5GRUiV6sQHaEV?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Grand Hyatt Kochi" /><span class="card-badge">Wedding</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Kochi</div>
+            <h3 class="card-title">Grand Hyatt Kochi</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">700 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹3,00,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Coorg" data-event="Engagement" data-capacity="300" data-budget="180000">
+          <div class="card-image-wrap"><img src="https://cdn0.weddingwire.in/vendor/6072/3_2/1280/jpg/wedding-resorts-amritara-ambatty-greens-resort-coorg-aerial-view-3_15_426072-166609497616983.jpeg" alt="Coorg Resort" /><span class="card-badge">Engagement</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Coorg</div>
+            <h3 class="card-title">Coorg Resort</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">300 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹1,80,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Udupi" data-event="Birthday" data-capacity="250" data-budget="120000">
+          <div class="card-image-wrap"><img src="https://tse2.mm.bing.net/th/id/OIP.FuG1SfgZ5dKmELq1NO6XygHaES?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Paradise Isle Resort" /><span class="card-badge">Birthday</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Udupi</div>
+            <h3 class="card-title">Paradise Isle Resort</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">250 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹1,20,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Hubli" data-event="Seminar" data-capacity="500" data-budget="160000">
+          <div class="card-image-wrap"><img src="https://tse1.mm.bing.net/th/id/OIP.wVMtoSopqSBpLNgYPnNtqAHaEs?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Cotton County Club" /><span class="card-badge">Seminar</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Hubli</div>
+            <h3 class="card-title">Cotton County Club</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">500 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹1,60,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Belgaum" data-event="Award Ceremony" data-capacity="550" data-budget="220000">
+          <div class="card-image-wrap"><img src="https://r1imghtlak.mmtcdn.com/143f2068df6911e8b0ce0242ac110002.jpg" alt="UK27 The Fern" /><span class="card-badge">Award Ceremony</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Belgaum</div>
+            <h3 class="card-title">UK27 The Fern</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">550 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹2,20,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Shimoga" data-event="Reception" data-capacity="420" data-budget="190000">
+          <div class="card-image-wrap"><img src="https://tse4.mm.bing.net/th/id/OIP.nPNmQs6cm7VToKJ7oHv1iwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Royal Orchid" /><span class="card-badge">Reception</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Shimoga</div>
+            <h3 class="card-title">Royal Orchid</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">420 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹1,90,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Mysore" data-event="Corporate" data-capacity="800" data-budget="280000">
+          <div class="card-image-wrap"><img src="https://tse2.mm.bing.net/th/id/OIP.qejw0V1NTBGjxNAaAJao7gHaFb?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Lalitha Mahal Palace" /><span class="card-badge">Corporate</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Mysore</div>
+            <h3 class="card-title">Lalitha Mahal Palace</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">800 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹2,80,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Bangalore" data-event="Conference" data-capacity="900" data-budget="450000">
+          <div class="card-image-wrap"><img src="https://tse1.mm.bing.net/th/id/OIP.qp-33_0v-N7mqKLntrlC2AHaDG?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Conrad Bengaluru" /><span class="card-badge">Conference</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Bangalore</div>
+            <h3 class="card-title">Conrad Bengaluru</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">900 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹4,50,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="venue-card" data-location="Goa" data-event="Luxury Gala" data-capacity="1300" data-budget="850000">
+          <div class="card-image-wrap"><img src="https://tse2.mm.bing.net/th/id/OIP.-oBE2jH1kAzyDIBnKwyw9wHaC9?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="W Goa Resort" /><span class="card-badge">Luxury Gala</span></div>
+          <div class="card-body">
+            <div class="card-location"><i class="fas fa-map-marker-alt"></i> Goa</div>
+            <h3 class="card-title">W Goa Resort</h3>
+            <div class="card-rule"></div>
+            <div class="card-meta">
+              <div class="meta-item"><span class="meta-label">Capacity</span><span class="meta-value">1,300 Guests</span></div>
+              <div class="meta-item"><span class="meta-label">Starting From</span><span class="meta-value gold">₹8,50,000</span></div>
+            </div>
+            <button class="view-btn">View Details <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+      </div><!-- /venue-grid -->
+
+      <!-- No results -->
+      <div class="no-result" id="noResult">
+        <div class="no-result-icon"><i class="fas fa-moon"></i></div>
+        <h3>No Venues Found</h3>
+        <p>Refine your filters to discover the perfect setting.</p>
+        <button class="view-btn no-result-btn" id="noResultReset">Clear Filters</button>
+      </div>
+
+    </div>
+  </section>
+  <!-- ===========================================
+            VENUE DETAILS MODAL
+=========================================== -->
+
+<div class="venue-modal" id="venueModal">
+
+    <div class="venue-modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <!-- Image -->
+
+        <img
+            id="modalImage"
+            class="modal-image"
+            src=""
+            alt="Venue Image"
+        >
+
+        <!-- Content -->
+
+        <div class="modal-body">
+
+            <h2 id="modalTitle"></h2>
+
+            <p class="modal-location">
+                <i class="fas fa-location-dot"></i>
+                <span id="modalLocation"></span>
+            </p>
+
+            <hr>
+
+            <h4>About This Venue</h4>
+
+            <p
+                id="modalDescription"
+                class="modal-description">
+            </p>
+
+            <!-- Information Cards -->
+
+            <div class="modal-info">
+
+                <div class="info-box">
+
+                    <i class="fas fa-users"></i>
+
+                    <h5>Capacity</h5>
+
+                    <span id="modalCapacity"></span>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fas fa-indian-rupee-sign"></i>
+
+                    <h5>Per Person</h5>
+
+                    <span id="modalPerPerson"></span>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fas fa-wallet"></i>
+
+                    <h5>Starting From</h5>
+
+                    <span id="modalTotalCost"></span>
+
+                </div>
+
+            </div>
+
+            <!-- Quote -->
+
+            <div class="venue-quote">
+
+                <i class="fas fa-quote-left"></i>
+
+                <p>
+
+                    "Have memorable memories with us."
+
+                </p>
+
+            </div>
+
+            <!-- Features -->
+
+            <div class="facility-section">
+
+                <h4>Facilities</h4>
+
+                <div class="facility-grid">
+
+                    <div>
+                        <i class="fas fa-car"></i>
+                        Parking
+                    </div>
+
+                    <div>
+                        <i class="fas fa-wifi"></i>
+                        Free WiFi
+                    </div>
+
+                    <div>
+                        <i class="fas fa-utensils"></i>
+                        Catering
+                    </div>
+
+                    <div>
+                        <i class="fas fa-camera"></i>
+                        Photography
+                    </div>
+
+                    <div>
+                        <i class="fas fa-music"></i>
+                        DJ & Music
+                    </div>
+
+                    <div>
+                        <i class="fas fa-snowflake"></i>
+                        AC Hall
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="modal-buttons">
+
+<button class="book-btn" id="bookNowBtn">
+
+    <i class="fas fa-calendar-check"></i>
+
+    Book Now
+
+</button>
+
+                <button
+                    class="close-btn">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-inner">
+
+        <!-- Col 1: Brand -->
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-badge">B</div>
+            <span class="footer-logo-text">BLVK MOON <span class="footer-logo-event">EVENT</span></span>
+          </div>
+          <p class="footer-tagline">Creating unforgettable experiences that inspire, connect, and leave lasting impressions across India.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Corporate Events</a></li>
+            <li><a href="#">Brand Activations</a></li>
+            <li><a href="#">Luxury Events</a></li>
+            <li><a href="#">Award Ceremonies</a></li>
+            <li><a href="#">Wedding Planning</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fas fa-envelope"></i><a href="mailto:bme@gmail.com">bme@gmail.com</a></li>
+            <li><i class="fas fa-phone"></i><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Bangalore, India</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Dream Craft Live. All Rights Reserved. Made with <i class="fas fa-heart" style="color:#D4AF37"></i> in India.</p>
+    </div>
+  </footer>
+
+  <script src="Venue.js"></script>
+</body>
+</html>

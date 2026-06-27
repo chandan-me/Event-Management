@@ -992,10 +992,11 @@ color:black;
 
 }
 .nav-link {
-    color: white !important;
-    margin-left: 20px;
-    position: relative;
-    transition: .3s;
+    color:#fff !important;
+    padding:12px 14px !important;
+    margin-left:0;
+    white-space:nowrap;
+    transition:.3s;
 }
 .nav-icon { margin-right: 8px; font-size: .9rem; transition: .4s; }
 .nav-link:hover .nav-icon {

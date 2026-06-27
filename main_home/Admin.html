@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Review Management</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<header class="admin-header">
+
+    <h1>
+        <i class="fa-solid fa-user-shield"></i>
+        Admin Dashboard
+    </h1>
+<p>Manage Customer Reviews & Event Bookings</p>
+
+</header>
+
+
+<section class="dashboard">
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h2 id="totalReviews">0</h2>
+            <p>Total Reviews</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="averageRating">0.0 ⭐</h2>
+            <p>Average Rating</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="fiveStar">0</h2>
+            <p>5 Star Reviews</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="review-controls">
+
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Search by Customer Name">
+
+
+
+
+    <select id="ratingFilter">
+
+        <option value="all">All Ratings</option>
+
+        <option value="5">★★★★★</option>
+
+        <option value="4">★★★★☆</option>
+
+        <option value="3">★★★☆☆</option>
+
+        <option value="2">★★☆☆☆</option>
+
+        <option value="1">★☆☆☆☆</option>
+
+    </select>
+
+</section>
+
+
+
+
+<section class="review-list" id="reviewList">
+
+<!-- Reviews Generated Using JavaScript -->
+
+</section>
+
+
+
+
+<!-- Edit Modal -->
+
+<div class="modal" id="editModal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2>Edit Review</h2>
+
+
+<label>Name</label>
+
+<input type="text" id="editName">
+
+
+<label>Email</label>
+
+<input type="email" id="editEmail">
+
+
+<label>Location</label>
+
+<input type="text" id="editLocation">
+
+
+<label>Rating</label>
+
+<select id="editRating">
+
+<option value="5">★★★★★</option>
+
+<option value="4">★★★★☆</option>
+
+<option value="3">★★★☆☆</option>
+
+<option value="2">★★☆☆☆</option>
+
+<option value="1">★☆☆☆☆</option>
+
+</select>
+
+
+<label>Review</label>
+
+<textarea
+id="editMessage"
+rows="6"></textarea>
+
+
+<button id="saveReview">
+
+Save Changes
+
+</button>
+
+</div>
+
+</div>
+<section class="booking-controls">
+
+    <input
+        type="text"
+        id="bookingSearch"
+        placeholder="Search by Name, Event or Venue">
+
+</section>
+<section class="booking-dashboard">
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h2 id="totalBookings">0</h2>
+            <p>Total Bookings</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="pendingBookings">0</h2>
+            <p>Pending</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="approvedBookings">0</h2>
+            <p>Approved</p>
+        </div>
+
+        <div class="stat-card">
+            <h2 id="rejectedBookings">0</h2>
+            <p>Rejected</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="booking-list">
+
+    <h2>
+
+        <i class="fa-solid fa-calendar-check"></i>
+
+        Event Bookings
+
+    </h2>
+
+    <div id="bookingContainer">
+
+    </div>
+
+</section>
+
+
+
+<script src="admin.js"></script>
+
+</body>
+</html>

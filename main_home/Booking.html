@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Booking | BLVK MOON EVENT</title>
+
+    <link rel="stylesheet" href="Booking.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-moon"></i>
+
+        <span>BLVK MOON EVENT</span>
+
+    </div>
+
+</header>
+
+
+<section class="booking-container">
+
+    <div class="booking-card">
+
+        <h1>Confirm Your Booking</h1>
+
+        <p class="subtitle">
+            Please verify your venue details and complete your booking.
+        </p>
+
+        <div class="divider"></div>
+
+
+        <!-- Venue Details -->
+
+        <h2>Venue Details</h2>
+
+        <div class="venue-details">
+
+            <div class="input-group">
+
+                <label>Venue Name</label>
+
+                <input
+                type="text"
+                id="venueName"
+                readonly>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Location</label>
+
+                <input
+                type="text"
+                id="venueLocation"
+                readonly>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Venue Budget</label>
+
+                <input
+                type="text"
+                id="venueBudget"
+                readonly>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Venue Capacity</label>
+
+                <input
+                type="text"
+                id="venueCapacity"
+                readonly>
+
+            </div>
+
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <!-- Booking Details -->
+
+        <h2>Booking Details</h2>
+
+        <form id="bookingForm">
+
+            <div class="input-group">
+
+                <label>Event Name</label>
+
+                <input
+                type="text"
+                id="eventName"
+                placeholder="Wedding / Reception / Birthday"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Event Date</label>
+
+                <input
+                type="date"
+                id="eventDate"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Number of Guests</label>
+
+                <input
+                type="number"
+                id="guestCount"
+                placeholder="Enter Number of Guests"
+                min="1"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Estimated Budget (₹)</label>
+
+                <input
+                type="number"
+                id="eventBudget"
+                placeholder="Estimated Budget"
+                required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Special Requirements</label>
+
+                <textarea
+                id="specialRequest"
+                rows="5"
+                placeholder="Photography, Decoration, Catering, DJ, etc."></textarea>
+
+            </div>
+
+
+            <button
+            type="submit"
+            class="confirm-btn">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Confirm Booking
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script src="Booking.js"></script>
+
+</body>
+</html>
