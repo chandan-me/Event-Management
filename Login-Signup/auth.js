@@ -138,7 +138,7 @@ JSON.stringify(user)
 alert("Login Successful");
 
 window.location.href =
-"index.html";
+"/Event-Management/main_home/User.html" ;
 
 }
 else{
