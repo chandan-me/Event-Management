@@ -9,83 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="home1.css">
+
+<!-- linking navbar and footer css files from components folder -->
+<link rel="stylesheet" href="/Event-Management/components/navbar.css">
+<link rel="stylesheet" href="/Event-Management/components/footer.css">
+
 </head>
 <body>
 <div id="progress"></div>
-<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-<div class="container -fluid px-3">
-  <a class="navbar-brand logo" href="https://www.chandan-n.me/">
-    <img src="logo.png" alt="Blvk Moon Logo" class="nav-logo">
-  <a href="Home1.html" class="company-name text-decoration-none">
-BLVK MOON EVENT
-</a>
 
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#hero"><i class="fas fa-house nav-icon"></i>Home</a>
-      </li>
-
-
-<li class="nav-item service-menu">
-
-  <a class="nav-link service-btn" href="#services">
-      <i class="fas fa-calendar-check nav-icon"></i>
-      Services
-  </a>
-
-  <div class="service-dropdown">
-
-<a href="../Services/pages/business-events.html">Business Events</a>
-<a href="../Services/pages/celebrations-galore.html">Celebrations Galore</a>
-<a href="../Services/pages/launches.html">Launches</a>
-<a href="../Services/pages/wedding-events.html">Wedding Events</a>
-<a href="../Services/pages/industry-conventions.html">Industry Conventions</a>
-<a href="../Services/pages/special-project.html">Special Projects</a>
-
-  </div>
-
-</li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/Clients/Clients.html"><i class="fas fa-star nav-icon"></i>Clients</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/Careers/Careers.html"><i class="fas fa-images nav-icon"></i>Careers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/Blog/Blog.html"><i class="fas fa-users nav-icon"></i>Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Team.html"><i class="fas fa-quote-left nav-icon"></i>team</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="Venue.html"><i class="fas fa-location-dot nav-icon"></i>venue</a>
-      </li>
-
-            <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/Login-Signup/login.html"><i class="fas fa-sign-in-alt"></i>Sign In</a>
-      </li>
-     <li class="nav-item">
-    <a class="nav-link" href="User.html">
-        <i class="fa-solid fa-user nav-icon"></i>
-        <span>You</span>
-    </a>
-</li>
-</li>
-      <li class="nav-item ms-lg-4">
-        <a class="btn btn-warning rounded-pill px-4" href="/Event-Management/Contact Us/contact.html">
-          <i class="fas fa-phone"></i>
-        </a>
-      </li>
-      
-    </ul>
-  </div>
-</div>
-</nav>
+<!-- Navbar -->
+ <div id="navbar"></div>
+<!--  -->
 
 
 <section class="hero" id="hero">
@@ -434,112 +369,7 @@ BLVK MOON EVENT
     </div>
   </div>
 </section>
-<!-- <section class="team-section" id="team">
-  <div class="container">
-    <div class="section-title text-center mb-5" data-aos="fade-up">
-      <span>OUR TEAM</span>
-      <h2>Meet The Experts Behind Every Event</h2>
-      <p>A passionate team of creative thinkers, strategists and event specialists dedicated to delivering unforgettable experiences.</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-        <div class="team-card" data-member="chaluva">
-          <img src="chaluva.jpeg" alt="Chaluva Shetty">
-          <div class="team-info">
-            <h4>Chaluva shetty</h4>
-            <p>Client Relations Manager</p>
-            <div class="team-social">
-              <a href="https://www.linkedin.com/in/chaluva-shetty-2023a8311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
-              <a href="chaluvashetty23@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-               <a href="https://github.com/chandan-me/Event-Management" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class="team-card" data-member="ujwal">
-          <img src="ujwal.png" alt="">
-          <div class="team-info">
-            <h4>Ujwal D</h4>
-            <p>Event Strategist</p>
-            <div class="team-social">
-              <a href="https://www.linkedin.com/in/ujwal-d-2023a8311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:ujwaldhananjaya@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-               <a href="https://github.com/chandan-me/Event-Management" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-        <div class="team-card" data-member="chandan">
-          <img src="chandan.png" alt="Daniel Smith">
-          <div class="team-info">
-            <h4>Chandan N</h4>
-            <p>Operations Head</p>
-            <div class="team-social">
-              <a href="https://www.linkedin.com/in/chandan-niranjan/"><i class="fab fa-linkedin"></i></a>
-             <a href="chandan2004.n@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-               <a href="https://github.com/chandan-me/Event-Management" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-        <div class="team-card" data-member="hari">
-          <img src="hari.jpeg" alt="Sophia Brown">
-          <div class="team-info">
-            <h4>Hari krishna S</h4>
-            <p>Creative Director</p>
-            <div class="team-social">
-              <a href="https://www.linkedin.com/in/hari-krishna-s-2023a8311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:hari.krishna.sk.05@gmail.com">
-        <i class="fa-solid fa-envelope"></i></a>
-               <a href="https://github.com/chandan-me/Event-Management" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="member-modal" id="memberModal">
-    <div class="member-modal-content">
-        <span class="close-modal">&times;</span>
-        <img id="modalImg" src="" alt="">
-        <h3 id="modalName"></h3>
-        <h5 id="modalRole"></h5>
-        <p><strong>Location:</strong> <span id="modalLocation"></span></p>
-        <p><strong>Work Mode:</strong> <span id="modalWork"></span></p>
-        <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
-        <p id="modalDesc"></p>
-       <ul id="modalAchievements"></ul>
-        <div class="modal-social">
-            <a id="modalLinkedin" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a id="modalGithub" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a id="modalInstagram" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a id="modalEmail">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
-        </div>
-    </div>
-</div> -->
+
 <section class="clients-section" id="clients">
   <div class="container">
     <div class="section-title text-center" data-aos="fade-up">
@@ -568,235 +398,7 @@ BLVK MOON EVENT
     </div>
   </div>
 </section>
-<!-- <section class="contact-section" id="contact">
-  <div class="container">
-    <div class="section-title text-center" data-aos="fade-up">
-      <span>GET IN TOUCH</span>
-      <h2>Let's Plan Your Next Event</h2>
-      <p>Fill in the form and our team will get back to you within 24 hours.</p>
-    </div>
-    <div class="row g-5 mt-3">
-      <div class="col-lg-5" data-aos="fade-right">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div>
-              <h5>Our Location</h5>
-              <p>Bangalore, Karnataka, India</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <h5>Email Us</h5>
-              <p>bme@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-            <div>
-              <h5>Call Us</h5>
-              <p>+91 98765 43210</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-clock"></i></div>
-            <div>
-              <h5>Working Hours</h5>
-              <p>Mon – Sat: 9 AM – 7 PM</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-7" data-aos="fade-left">
-        <div class="contact-form-card">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <input type="text" class="form-input" placeholder="Your Name">
-            </div>
-            <div class="col-md-6">
-              <input type="email" class="form-input" placeholder="Your Email">
-            </div>
-            <div class="col-md-6">
-              <input type="tel" class="form-input" placeholder="Phone Number">
-            </div>
-            <div class="col-md-6">
-              <select class="form-input">
-                <option value="">Select Event Type</option>
-                <option>Corporate Event</option>
-                <option>Product Launch</option>
-                <option>Luxury Gala</option>
-                <option>Wedding</option>
-                <option>Award Ceremony</option>
-              </select>
-            </div>
-            <div class="col-12">
-              <textarea class="form-input" rows="4" placeholder="Tell us about your event..."></textarea>
-            </div>
-            <div class="col-12">
-              <button class="submit-btn">
-                <i class="fas fa-paper-plane"></i> Send Message
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- <section class="review-section" id="reviews">
-    <div class="container">
 
-        <div class="section-title text-center">
-            <span>CLIENT FEEDBACK</span>
-            <h2>Share Your Experience</h2>
-            <p>We value your feedback and continuously strive for excellence.</p>
-        </div>
-
-        <div class="review-form-container">
-
-            <form id="reviewForm">
-
-                <input type="text" id="name" placeholder="Your Name" required>
-
-                <input type="email" id="email" placeholder="Your Email" required>
-
-                <input type="text" id="location" placeholder="Location" required>
-
-                <div class="rating-box">
-                    <label>Rating:</label>
-
-                    <div class="star-rating">
-                        <span class="star" data-value="1">&#9733;</span>
-                        <span class="star" data-value="2">&#9733;</span>
-                        <span class="star" data-value="3">&#9733;</span>
-                        <span class="star" data-value="4">&#9733;</span>
-                        <span class="star" data-value="5">&#9733;</span>
-                    </div>
-
-                    <input type="hidden" id="rating" required>
-                </div>
-
-                <textarea
-                    id="message"
-                    rows="5"
-                    placeholder="Write your feedback..."
-                    required></textarea>
-
-                <button type="submit" class="review-btn">
-                    Submit Review
-                </button>
-
-            </form>
-
-        </div>
-        <section class="testimonials-section" id="testimonials">
-  <div class="container">
-    <div class="section-title text-center" data-aos="fade-up">
-      <span>CLIENT REVIEWS</span>
-      <h2>What Our Clients Say</h2>
-      <p>Real words from real people who trusted DCL to make their events extraordinary.</p>
-    </div>
-    <div class="row g-4 mt-5">
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="testimonial-card">
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">"DCL transformed our annual conference into an incredible experience. Every detail was perfect — from the stage setup to the catering. Our delegates were blown away!"</p>
-          <div class="reviewer">
-            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Reviewer">
-            <div>
-              <h5>Rajesh Kumar</h5>
-              <span>CEO, TechNova India</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="testimonial-card featured-review">
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">"Our product launch was a massive success thanks to DCL. The creative direction, execution and crowd management were all top-notch. We will definitely work with them again!"</p>
-          <div class="reviewer">
-            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Reviewer">
-            <div>
-              <h5>Priya Sharma</h5>
-              <span>Marketing Head, Luxe Brands</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-  <div class="testimonial-card">
-    <div class="stars">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star-half-alt"></i>
-    </div>
-    <p class="review-text">
-      "The team handled our corporate conference exceptionally well. The venue setup, guest management, and technical support were outstanding. A few minor delays occurred during registration, but overall it was a fantastic experience."
-    </p>
-    <div class="reviewer">
-      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Reviewer">
-      <div>
-        <h5>Rahul Mehta</h5>
-        <span>Operations Manager, TechNova Solutions</span>
-      </div>
-    </div>
-  </div>
-</div>
- <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-  <div class="testimonial-card">
-    <div class="stars">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="far fa-star"></i>
-      <i class="far fa-star"></i>
-      <i class="far fa-star"></i>
-    </div>
-    <p class="review-text">
-      "The event was organized professionally and the staff were helpful throughout. However, the overall package cost was significantly higher than other event management companies we considered, making it difficult to justify the expense."
-    </p>
-    <div class="reviewer">
-      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Reviewer">
-      <div>
-        <h5>Ananya Verma</h5>
-        <span>Founder, AV Creations</span>
-      </div>
-    </div>
-  </div>
-</div>
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="testimonial-card">
-          <div class="stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            <i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="review-text">"The gala dinner they organized for us was simply magical. Guests are still talking about it months later. Professional, punctual and absolutely creative!"</p>
-          <div class="reviewer">
-            <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Reviewer">
-            <div>
-              <h5>Anil Mehta</h5>
-              <span>Director, Prestige Group</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-        <!-- <div class="reviews-container" id="reviewsContainer">
-        </div>
-
-    </div>
-</section> -->
 <section class="review-section" id="client-review">
 
     <div class="section-title text-center">
@@ -847,66 +449,25 @@ BLVK MOON EVENT
     </div>
 </div>
 
-</section>
-<section class="cta-section" data-aos="zoom-in">
-  <div class="container text-center">
-    <h2>Ready To Create Something Extraordinary?</h2>
-    <p>Let's bring your vision to life.</p>
-    <a href="#contact" class="cta-btn">Start Your Project</a>
-  </div>
-</section>
-<footer class="footer" data-aos="fade-up">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <h3>DCL</h3>
-        <p>Creating unforgettable experiences that inspire, connect, and leave lasting impressions across India.</p>
-        <div class="social-icons">
-          <a href="https://wa.me/916360475219" target="_blank" class="social"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://www.instagram.com/n_chandan2004/" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
-          <a href="https://x.com/n_chandan2004" target="_blank" class="social"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://www.linkedin.com/in/chandan-niranjan/" target="_blank" class="social"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="col-lg-2 mb-4">
-        <h5>Quick Links</h5>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#events">Services</a></li>
-          <li><a href="#Portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 mb-4">
-        <h5>Services</h5>
-        <ul>
-          <li>Corporate Events</li>
-          <li>Brand Activations</li>
-          <li>Luxury Events</li>
-          <li>Award Ceremonies</li>
-          <li>Wedding Planning</li>
-        </ul>
-      </div>
-      <div class="col-lg-3 mb-4">
-        <h5>Contact</h5>
-        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:chandan2004.n@gmail.com">bme@gmail.com</a></p>
-        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
-        <p><i class="fa-solid fa-location-dot"></i> Bangalore, India</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Dream Craft Live. All Rights Reserved. Made with <i class="fas fa-heart" style="color:#ffc107"></i> in India.</p>
-    </div>
-  </div>
-</footer>
+
+<!-- Footer -->
+<div id="footer"></div>
+
+<!-- for importing navabra and footer from components folder -->
+<script src="/Event-Management/Components/navbar.js"></script>
+
+<script src="/Event-Management/Components/include.js"></script>
+
+<script src="/Event-Management/Components/footer.js"></script>
+<script src="/Event-Management/main_home/home1.js"></script>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- AOS Library -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="home1.js"></script>
 <script>
 AOS.init({ duration: 1000, once: true });
 </script>
+
 </body>
 </html>

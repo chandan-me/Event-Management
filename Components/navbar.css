@@ -1,0 +1,980 @@
+:root{
+    --primary:#ffc107;
+    --dark:#0b0b0b;
+    --white:#ffffff;
+    --glass:rgba(0,0,0,.75);
+    --transition:.35s ease;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.custom-navbar{
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    transition:var(--transition);
+
+    padding:10px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:9999;
+
+}
+
+.custom-navbar.scrolled{
+
+    background:#000;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.45);
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.custom-navbar .container-fluid{
+
+    padding-left:28px;
+
+    padding-right:28px;
+
+}
+
+/* ==========================
+   BRAND
+========================== */
+
+.navbar-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    gap:14px;
+
+    margin-right:10px;
+
+}
+
+.nav-logo{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+    box-shadow:0 0 10px rgba(255,193,7,.45);
+
+}
+
+.navbar-brand:hover .nav-logo{
+
+    transform:rotate(360deg);
+
+}
+
+.company-name{
+
+    color:#fff;
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    transition:.3s;
+
+    white-space:nowrap;
+
+}
+
+.company-name:hover{
+
+    color:var(--primary);
+
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.navbar-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.nav-item{
+
+    list-style:none;
+
+    position:relative;
+
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+.nav-link{
+
+    color:#fff !important;
+
+    text-decoration:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:6px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    min-width:72px;
+
+    padding:8px 10px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.nav-icon{
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:var(--primary)!important;
+
+    background:rgba(255,193,7,.08);
+
+}
+
+.nav-link:hover .nav-icon{
+
+    color:var(--primary);
+
+    transform:translateY(-3px) scale(1.15);
+
+}
+
+/* underline */
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:0;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:3px;
+
+    background:var(--primary);
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover::after{
+
+    width:70%;
+
+}
+
+/* ==========================
+   ACTIVE PAGE
+========================== */
+
+.nav-link.active{
+
+    color:var(--primary)!important;
+
+}
+
+.nav-link.active::after{
+
+    width:70%;
+
+}
+
+/* ==========================
+   CONTACT BUTTON
+========================== */
+
+.contact-btn{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#000;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.contact-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#ffd54f;
+
+    box-shadow:0 10px 25px rgba(255,193,7,.45);
+
+}
+
+/* ==========================
+   TOGGLER
+========================== */
+
+.navbar-toggler{
+
+    border:2px solid rgba(255,255,255,.2);
+
+    padding:10px;
+
+    border-radius:12px;
+
+}
+
+.navbar-toggler:focus{
+
+    box-shadow:none;
+
+}
+
+.navbar-toggler-icon{
+
+    filter:invert(1);
+
+}
+
+/*=====================================
+      SERVICES DROPDOWN
+======================================*/
+
+.service-menu{
+    position:relative;
+}
+
+/* Dropdown Container */
+
+.service-dropdown{
+
+    position:absolute;
+
+    top:78px;
+
+    left:50%;
+
+    transform:translateX(-50%) translateY(15px);
+
+    width:300px;
+
+    background:rgba(15,15,15,.97);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:.35s ease;
+
+    z-index:9999;
+
+}
+
+/* Desktop Hover */
+
+@media (min-width:992px){
+
+.service-menu:hover .service-dropdown{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+}
+
+/* Links */
+
+.service-dropdown a{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 24px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+/* Arrow */
+
+.service-dropdown a::after{
+
+    content:"➜";
+
+    opacity:0;
+
+    transition:.3s;
+
+    transform:translateX(-8px);
+
+}
+
+/* Hover */
+
+.service-dropdown a:hover{
+
+    background:rgba(255,193,7,.08);
+
+    color:#ffc107;
+
+    padding-left:35px;
+
+}
+
+.service-dropdown a:hover::after{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* Active */
+
+.service-dropdown a.active{
+
+    color:#ffc107;
+
+    border-left:4px solid #ffc107;
+
+}
+
+/* Dropdown Arrow */
+
+.dropdown-arrow{
+
+    font-size:11px;
+
+    margin-left:6px;
+
+    transition:.35s;
+
+}
+
+/* Desktop Rotate */
+
+@media (min-width:992px){
+
+.service-menu:hover .dropdown-arrow{
+
+    transform:rotate(180deg);
+
+}
+
+}
+
+/*=====================================
+        MOBILE NAVBAR
+======================================*/
+
+@media (max-width:991.98px){
+
+.custom-navbar{
+
+    padding:10px 0;
+
+}
+
+.navbar-collapse{
+
+    margin-top:12px;
+
+    padding:14px;
+
+    background:#111;
+
+    border-radius:18px;
+
+    overflow:visible !important;
+
+}
+
+.navbar-nav{
+
+    gap:8px;
+
+}
+
+.nav-item{
+
+    width:100%;
+
+}
+
+.nav-link{
+
+    width:100%;
+
+    flex-direction:row;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    gap:16px;
+
+    min-width:100%;
+
+    padding:15px 18px;
+
+}
+
+.nav-link span{
+
+    flex:1;
+
+}
+
+.dropdown-arrow{
+
+    margin-left:auto;
+
+}
+
+/* MOBILE DROPDOWN */
+
+.service-dropdown{
+
+    position:static !important;
+
+    width:100%;
+
+    margin-top:8px;
+
+    background:#1b1b1b;
+
+    border-radius:12px;
+
+    display:none;
+
+    opacity:1 !important;
+
+    visibility:visible !important;
+
+    pointer-events:auto !important;
+
+    transform:none !important;
+
+    box-shadow:none;
+
+    border:none;
+
+    overflow:hidden;
+
+    padding:8px 0;
+
+}
+
+/* IMPORTANT  main*/
+
+.service-menu.show>.service-dropdown{
+
+    display:block;
+
+    animation:dropdownSlide .3s ease;
+
+}
+
+.service-dropdown a{
+
+    padding:15px 22px;
+
+    font-size:15px;
+
+}
+
+.service-dropdown a::after{
+
+    display:none;
+
+}
+
+.service-menu.show .dropdown-arrow{
+
+    transform:rotate(180deg);
+
+}
+
+}
+
+@keyframes dropdownSlide{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}   
+
+/*=====================================
+        RESPONSIVE
+======================================*/
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .company-name{
+
+        font-size:28px;
+
+    }
+
+    .navbar-nav{
+
+        gap:12px;
+
+    }
+
+    .nav-link{
+
+        min-width:65px;
+
+        font-size:14px;
+
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:991.98px){
+
+    .company-name{
+
+        font-size:22px;
+
+    }
+
+    .nav-logo{
+
+        width:50px;
+
+        height:50px;
+
+    }
+
+    .contact-btn{
+
+        width:100%;
+
+        height:48px;
+
+        border-radius:12px;
+
+        margin-top:12px;
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:576px){
+
+    .custom-navbar{
+
+        padding:8px 0;
+
+    }
+
+    .custom-navbar .container-fluid{
+
+        padding-left:15px;
+
+        padding-right:15px;
+
+    }
+
+    .company-name{
+
+        font-size:18px;
+
+    }
+
+    .nav-logo{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
+    .navbar-collapse{
+
+        padding:16px;
+
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:360px){
+
+    .company-name{
+
+        font-size:16px;
+
+    }
+
+    .nav-logo{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+}
+
+/*=====================================
+        NAVBAR ANIMATION
+======================================*/
+
+.custom-navbar{
+
+    animation:navbarDown .7s ease;
+
+}
+
+@keyframes navbarDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=====================================
+        LOGO EFFECT
+======================================*/
+
+.navbar-brand:hover{
+
+    filter:drop-shadow(0 0 10px rgba(255,193,7,.45));
+
+}
+
+/*=====================================
+        COMPANY NAME
+======================================*/
+
+.company-name{
+
+    position:relative;
+
+}
+
+.company-name::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:0;
+
+    height:2px;
+
+    background:#ffc107;
+
+    transition:.35s;
+
+}
+
+.company-name:hover::after{
+
+    width:100%;
+
+}
+
+/*=====================================
+        RIPPLE EFFECT
+======================================*/
+
+.nav-link{
+
+    overflow:hidden;
+
+}
+
+.nav-link::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:rgba(255,193,7,.08);
+
+    border-radius:50%;
+
+    transition:.45s;
+
+    z-index:-1;
+
+}
+
+.nav-link:hover::before{
+
+    width:170px;
+
+    height:170px;
+
+}
+
+/*=====================================
+        CONTACT BUTTON
+======================================*/
+
+.contact-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.contact-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.15);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+}
+
+.contact-btn:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/*=====================================
+        SCROLLBAR
+======================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ffc107;
+
+    border-radius:20px;
+
+}
+
+/*=====================================
+        SMOOTH SCROLL
+======================================*/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/*=====================================
+        TRANSITIONS
+======================================*/
+
+.nav-link,
+.service-dropdown a,
+.contact-btn,
+.nav-logo,
+.company-name{
+
+    transition:
+
+    background .3s,
+
+    color .3s,
+
+    transform .3s,
+
+    box-shadow .3s;
+
+}
+
+/*=====================================
+        ACCESSIBILITY
+======================================*/
+
+.nav-link:focus,
+.contact-btn:focus{
+
+    outline:2px solid #ffc107;
+
+    outline-offset:4px;
+
+}
+
+/*=====================================
+        HIDE DROPDOWN ARROW
+======================================*/
+
+.service-btn::after{
+
+    display:none !important;
+
+}
+
+/*=====================================
+        END
+======================================*/

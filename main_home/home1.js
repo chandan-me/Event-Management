@@ -387,59 +387,45 @@ cards.forEach(card => {
         document.body.style.overflow = "hidden";
     });
 });
-closeBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
-    document.body.style.overflow = "auto";
-});
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
+
+if (closeBtn) {
+
+    closeBtn.addEventListener("click", () => {
+
         modal.classList.remove("active");
+
         document.body.style.overflow = "auto";
-    }
-});
 
-// Dropdown
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-const serviceBtn =
-document.querySelector(".service-btn");
-
-const dropdown =
-document.querySelector(".service-dropdown");
-
-if(!serviceBtn || !dropdown) return;
-
-serviceBtn.addEventListener("click",(e)=>{
-
-e.preventDefault();
-
-dropdown.classList.toggle("show");
-
-});
-
-document.addEventListener("click",(e)=>{
-
-if(
-!serviceBtn.contains(e.target)
-&&
-!dropdown.contains(e.target)
-){
-
-dropdown.classList.remove("show");
+    });
 
 }
 
-});
+if (modal) {
 
-});
+    modal.addEventListener("click", (e) => {
 
-document.getElementById("reviewForm").addEventListener("submit", function(e) {
+        if (e.target === modal) {
 
-    // e.preventDefault(); // Stops the form from submitting
+            modal.classList.remove("active");
 
-    alert("✅ Your review has been submitted successfully!\n\nThank you for your feedback.");
+            document.body.style.overflow = "auto";
 
-    this.reset();
+        }
 
-});
+    });
+
+}
+
+
+
+if (reviewForm) {
+
+    reviewForm.addEventListener("submit", function (e) {
+
+        alert("✅ Your review has been submitted successfully!");
+
+        this.reset();
+
+    });
+
+}
