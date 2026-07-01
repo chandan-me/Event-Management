@@ -10,89 +10,27 @@
 
   <!-- Shared global design system -->
   <link rel="stylesheet" href="./assets/css/global.css" />
-  <link rel="stylesheet" href="./assets/css/footer.css" />
-  <link rel="stylesheet" href="./assets/css/whatsapp.css" />
-  <link rel="stylesheet" href="./assets/css/animations.css" />
 
-  <!-- Font Awesome (matches Blog page footer + WhatsApp icon) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
   <!-- Bootstrap Icons (required for .bi-* icons used across the page) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="/Event-Management/components/navbar.css">
+
+<link rel="stylesheet" href="/Event-Management/components/footer.css">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
 
   
-<!-- navbar -->
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <!--  -->
 
     <div id="progress"></div>
-<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-<div class="container">
-  <a class="navbar-brand logo" href="https://www.chandan-n.me/">
-    <img src="/Event-Management/Services/images/logo.png" alt="Blvk Moon Logo" class="nav-logo">
-  </a>
-  <span class="company-name">BLVK  MOON EVENT</span>
-
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/main_home/Home1.html"><i class="fas fa-house nav-icon"></i>Home</a>
-      </li>
-
-
-<li class="nav-item service-menu">
-
-  <a class="nav-link service-btn">
-      <i class="fas fa-calendar-check nav-icon"></i>
-      Services 
-  </a>
-
-  <div class="service-dropdown">
-
-    <a href="../Services/pages/business-events.html">Business Events</a>
-
-    <a href="../Services/pages/celebrations-galore.html">Celebrations Galore</a>
-
-    <a href="../Services/pages/launches.html">Launches</a>
-
-    <a href="../Services/pages/wedding-events.html">Wedding Events</a>
-
-    <a href="../Services/pages/industry-conventions.html">Industry Conventions</a>
-
-    <a href="../Services/pages/special-projects.html">Special Projects</a>
-
-  </div>
-
-</li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/Clients/Clients.html"><i class="fas fa-star nav-icon"></i>Clients</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/Careers/Careers.html"><i class="fas fa-images nav-icon"></i>Careers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/Blog/Blog.html"><i class="fas fa-users nav-icon"></i>Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/main_home/Home1.html#team"><i class="fas fa-quote-left nav-icon"></i>team</a>
-      </li>
-
-            <li class="nav-item">
-        <a class="nav-link" href="/Event-Management/Login-Signup/login.html"><i class="fas fa-sign-in-alt"></i>Sign In</a>
-      </li>
-      <li class="nav-item ms-lg-4">
-        <a class="btn btn-warning rounded-pill px-4" href="/Event-Management/Contact Us/contact.html">
-          <i class="fas fa-phone"></i> Contact Us
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-</nav>
 
   <!-- =====================
        Hero Section
@@ -750,100 +688,6 @@
     </div>
   </section>
 
-  <!-- =====================
-       FAQ - Premium Enterprise Accordion
-   ====================== -->
-  <section class="wm-section wm-faq-section" id="faq">
-    <div class="wm-faq-wrapper">
-      <div class="wm-faq-header text-center reveal-up" data-reveal="up">
-        <h2 class="wm-section-title">Frequently Asked Questions</h2>
-        <div class="wm-faq-divider" aria-hidden="true"></div>
-        <p class="wm-section-subtitle">Quick answers about hiring, culture, and benefits.</p>
-      </div>
-
-      <div class="wm-faq-accordion reveal-up" data-reveal="up" aria-label="FAQ">
-        <div class="wm-faq-card" data-faq-card>
-          <button class="wm-faq-trigger" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
-            <span class="wm-faq-question">Hiring Process</span>
-            <span class="wm-faq-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </span>
-          </button>
-          <div id="faqCollapse1" class="wm-faq-collapse collapse" data-bs-parent=".wm-faq-accordion" aria-labelledby="faq1">
-            <div class="wm-faq-answer">
-              <p>Application review → initial conversation → assessment & selection → onboarding.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="wm-faq-card" data-faq-card>
-          <button class="wm-faq-trigger" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-            <span class="wm-faq-question">Work Culture</span>
-            <span class="wm-faq-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </span>
-          </button>
-          <div id="faqCollapse2" class="wm-faq-collapse collapse" data-bs-parent=".wm-faq-accordion" aria-labelledby="faq2">
-            <div class="wm-faq-answer">
-              <p>Premium, corporate, and collaborative. We value craft, clarity, and continuous improvement.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="wm-faq-card" data-faq-card>
-          <button class="wm-faq-trigger" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-            <span class="wm-faq-question">Internships</span>
-            <span class="wm-faq-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </span>
-          </button>
-          <div id="faqCollapse3" class="wm-faq-collapse collapse" data-bs-parent=".wm-faq-accordion" aria-labelledby="faq3">
-            <div class="wm-faq-answer">
-              <p>Available for candidates who demonstrate curiosity, discipline, and a strong learning mindset.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="wm-faq-card" data-faq-card>
-          <button class="wm-faq-trigger" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-            <span class="wm-faq-question">Remote Work</span>
-            <span class="wm-faq-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </span>
-          </button>
-          <div id="faqCollapse4" class="wm-faq-collapse collapse" data-bs-parent=".wm-faq-accordion" aria-labelledby="faq4">
-            <div class="wm-faq-answer">
-              <p>Role-dependent. Some positions may be hybrid or remote—expect clear deliverables.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="wm-faq-card" data-faq-card>
-          <button class="wm-faq-trigger" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-            <span class="wm-faq-question">Benefits</span>
-            <span class="wm-faq-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </span>
-          </button>
-          <div id="faqCollapse5" class="wm-faq-collapse collapse" data-bs-parent=".wm-faq-accordion" aria-labelledby="faq5">
-            <div class="wm-faq-answer">
-              <p>Growth opportunities, training, recognition, and a supportive team environment.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- =====================
        Final CTA Section
@@ -998,90 +842,32 @@
     </div>
   </div>
 
-  <!-- ===================================
-       NEED HELP BUTTON (copied EXACTLY from Blog)
-  ==================================== -->
+<!-- Footer -->
+<div id="footer"></div>
 
-  <a href="https://wa.me/917899663405?text=Hello%20I%20need%20help%20with%20an%20event." target="_blank" class="need-help-btn">
-    <i class="fab fa-whatsapp"></i>Need Help?</a>
+<!-- Navbar -->
+<script src="/Event-Management/components/navbar.js"></script>
 
-  <!-- ===================================
-       PREMIUM FOOTER (copied EXACTLY from Blog)
-  ==================================== -->
-  <footer class="footer-premium">
+<!-- Footer -->
+<script src="/Event-Management/components/footer.js"></script>
 
-    <div class="container">
-      <div class="footer-grid">
+<!-- Include HTML Components -->
+<script src="/Event-Management/components/include.js"></script>
 
-        <!-- COLUMN 1 -->
-        <div class="footer-column reveal">
-          <h3 class="footer-logo">EventSphere</h3>
-          <h5>Follow Our Journey</h5>
-          <div class="social-icons">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-          <h6>Location</h6>
-          <p>Bangalore, India</p>
-        </div>
+<!-- Page JS -->
+  <script src="/Event-Management/Careers/Careers.js"></script>
 
-        <!-- COLUMN 2 -->
-        <div class="footer-column reveal">
-          <h4>Our Services</h4>
-          <ul>
-            <li>Corporate Events</li>
-            <li>Conferences</li>
-            <li>Celebrations</li>
-            <li>Inaugurations</li>
-            <li>Hybrid Events</li>
-            <li>Special Projects</li>
-          </ul>
-        </div>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- COLUMN 3 -->
-        <div class="footer-column reveal">
-          <h4>Company</h4>
-          <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Works</li>
-            <li>Clients</li>
-            <li>Blog</li>
-          </ul>
-        </div>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-        <!-- COLUMN 4 -->
-        <div class="footer-column reveal">
-          <h4>Get In Touch</h4>
-          <p>info@eventsphere.com</p>
-          <div class="footer-map-wrap">
-            <div class="map-box">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3887.5192203432025!2d77.550553374842!3d13.002573387315648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1781620434450!5m2!1sen!2sin"
-                width="600"
-                height="450"
-                style="border:0; border-radius:20px; width:100%; height:100%; min-height:320px;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./Careers.js"></script>
+<script>
+AOS.init({
+    duration: 1000,
+    once: true
+});
+</script>
 </body>
 </html>

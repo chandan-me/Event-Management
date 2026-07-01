@@ -1,0 +1,189 @@
+
+
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+#progress{
+    position:fixed;
+    top:0;
+    left:0;
+    width:0;
+    height:4px;
+    background:#ffc107;
+    z-index:99999;
+}
+
+
+/* ==========================
+   TEAM SECTION
+========================== */
+
+.team-section{
+    padding:140px 0 100px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title span{
+    color:var(--primary);
+    font-weight:700;
+}
+
+.section-title h2{
+    font-size:3rem;
+    margin:15px 0;
+}
+
+.team-card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    transition:.4s;
+    cursor:pointer;
+    height:100%;
+    border:1px solid #eee;
+}
+
+.team-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+    box-shadow:0 15px 40px rgba(255,193,7,.3);
+}
+
+.team-card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+
+.team-info{
+    padding:25px;
+    text-align:center;
+}
+
+.team-info h4{
+    color:var(--text-color);
+    font-weight:700;
+}
+
+.team-info p{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.team-social{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.team-social a{
+    width:45px;
+    height:45px;
+    background:#f3f3f3;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#333;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.team-social a:hover{
+    background:var(--primary);
+    transform:scale(1.1);
+}
+
+/* ==========================
+   MODAL
+========================== */
+
+.member-modal{
+    position:fixed;
+    inset:0;
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+
+    background:rgba(255,255,255,.08);
+
+    z-index:99999;
+}
+
+.member-modal.active{
+    display:flex;
+}
+
+.member-modal-content{
+    width:500px;
+    max-width:95%;
+    max-height:85vh;
+    overflow-y:auto;
+
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    position:relative;
+}
+
+.member-modal-content img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.close-modal{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+#modalAchievements{
+    text-align:left;
+    margin-top:15px;
+}
+
+.modal-social{
+    margin-top:20px;
+}
+
+.modal-social a{
+    margin:0 10px;
+    font-size:22px;
+    color:var(--primary);
+}
+
+.member-modal-content::-webkit-scrollbar{
+    width:4px;
+}
+
+.member-modal-content::-webkit-scrollbar-thumb{
+    background:var(--primary);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+    .team-card img{
+        height:320px;
+    }
+}

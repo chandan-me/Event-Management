@@ -1,12 +1,3 @@
-// ==========================
-// AOS INITIALIZATION
-// ==========================
-
-AOS.init({
-    duration: 1200,
-    once: true
-});
-
 
 // ==========================
 // HERO VIDEO SPEED

@@ -1,27 +1,24 @@
-// AOS
+if (typeof AOS !== "undefined") {
 
-AOS.init({
-    duration:1000,
-    once:true
-});
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+
+}
 
 // Navbar Scroll
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    const navbar =
-    document.querySelector(".custom-navbar");
+    const navbar = document.querySelector(".custom-navbar");
 
-    if(window.scrollY > 50){
+    if (!navbar) return;
 
-        navbar.style.background =
-        "rgba(0,0,0,.85)";
-
-    }else{
-
-        navbar.style.background =
-        "rgba(0,0,0,.4)";
-    }
+    navbar.style.background =
+        window.scrollY > 50
+            ? "rgba(0,0,0,.85)"
+            : "rgba(0,0,0,.4)";
 
 });
 

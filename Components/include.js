@@ -33,21 +33,29 @@ async function loadComponent(id, file) {
 
 document.addEventListener("DOMContentLoaded", async () => {
 
+    // Load Navbar
     await loadComponent(
         "navbar",
         "/Event-Management/components/navbar.html"
     );
 
+    // Load Footer
     await loadComponent(
         "footer",
         "/Event-Management/components/footer.html"
     );
 
     // Initialize Navbar
-
     if (typeof initNavbar === "function") {
 
         initNavbar();
+
+    }
+
+    // Initialize Footer
+    if (typeof initFooter === "function") {
+
+        initFooter();
 
     }
 

@@ -13,19 +13,24 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="blog.css">
+<link rel="stylesheet" href="/Event-Management/components/navbar.css">
+
+<link rel="stylesheet" href="/Event-Management/components/footer.css">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<link rel="stylesheet" href="/Event-Management/Blog/Blog.css">
 
 </head>
 
 <body>
 
-<!-- navbar -->
-
-    <div id="progress"></div>
-<!-- Navbar -->
- <div id="navbar"></div>
-<!--  -->
+ <div id="progress"></div>
+ 
+  <!-- Navbar -->
+  <div id="navbar"></div>
+  <!--  -->
 
   <!--  HERO SECTION -->
 
@@ -387,102 +392,34 @@
     </div>
 
 </div>
-  <!-- PROFESSIONAL EVENT CTA-->
-
-  <section class="event-cta">
-    <div class="container">
-      <div class="cta-wrapper reveal">
-        <span class="cta-tag reveal">Need Event Help?</span>
-        <h2 class="reveal">
-          <span class="line1">Get Professional</span>
-          <span class="line2">Event Planning &amp;</span>
-          <span class="line3">Execution</span>
-        </h2>
-        <p class="reveal">
-          From conferences and product launches to celebrations and brand activations, we help organizations create extraordinary experiences.
-        </p>
-        <div class="cta-buttons reveal">
-          <a href="https://wa.me/917899663405" target="_blank" class="cta-primary">Get Free Consultation</a>
-          <a href="#blogs" class="cta-secondary cta-insights">View Our Insights <span aria-hidden="true">→</span></a>
-        </div>
-
-        <!-- Premium visual (right side) -->
-        <div class="cta-visual reveal" aria-hidden="true">
-          <div class="cta-visual-frame">
-            <div class="cta-float-icon icon-calendar">
-              <i class="fa-regular fa-calendar-days"></i>
-            </div>
-            <div class="cta-float-icon icon-ticket">
-              <i class="fa-solid fa-ticket"></i>
-            </div>
-            <div class="cta-float-icon icon-mic">
-              <i class="fa-solid fa-microphone"></i>
-            </div>
-            <div class="cta-float-icon icon-stage">
-              <i class="fa-solid fa-music"></i>
-            </div>
-            <div class="cta-float-icon icon-conference">
-              <i class="fa-solid fa-building"></i>
-            </div>
-            <div class="cta-float-icon icon-location">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-
-            <img class="cta-illustration" src="images/cta-illustration.png" alt="">
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!--  NEWSLETTER -->
-
-  <section class="newsletter-section">
-    <div class="container">
-      <div class="newsletter-wrapper">
-        <div class="newsletter-left reveal">
-          <span class="newsletter-badge">Stay Updated</span>
-          <h2 class="reveal">
-            <span class="line1">Get Event Inspiration</span>
-            <span class="line2">& Industry Insights</span>
-            <span class="line3">Every Week</span>
-          </h2>
-          <p class="reveal">
-            Join event professionals receiving our newsletter with trends, tips and exclusive updates.
-          </p>
-        </div>
-        <div class="newsletter-right reveal">
-          <form class="newsletter-form" autocomplete="on">
-            <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
 
 <!-- Footer -->
 <div id="footer"></div>
 
-<!-- for importing navabra and footer from components folder -->
-<script src="/Event-Management/Components/nav-footer.js"></script>
-<script>
-loadComponent("navbar", "/Event-Management/components/navbar.html");
-loadComponent("footer", "/Event-Management/components/footer.html");
-</script>
+<!-- Navbar -->
+<script src="/Event-Management/components/navbar.js"></script>
 
-  <!-- NEED HELP BUTTON-->
+<!-- Footer -->
+<script src="/Event-Management/components/footer.js"></script>
 
-  <a href="https://wa.me/917899663405?text=Hello%20I%20need%20help%20with%20an%20event." target="_blank" class="need-help-btn">
-    <i class="fab fa-whatsapp"></i>Need Help?</a>
+<!-- Include HTML Components -->
+<script src="/Event-Management/components/include.js"></script>
 
-  <!-- Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JS -->
+<!-- Page JS -->
   <script src="blog.js"></script>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration: 1000,
+    once: true
+});
+</script>
 
 </body>
 </html>
